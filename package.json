@@ -6,7 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "format": "prettier -w"
+    "format": "prettier -w",
+    "dev": "vite",
+    "vite-build": "vite build",
+    "vite-preview": "vite preview"
   },
   "repository": {
     "type": "git",
