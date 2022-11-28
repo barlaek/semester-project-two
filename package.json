@@ -5,8 +5,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
+    "test": "npm run test-unit && npm run test-e2e-cli",
     "test-unit": "jest",
+    "test-e2e": "cypress open",
+    "test-e2e-cli": "cypress run",
     "dev": "vite",
     "vite-build": "vite build",
     "vite-preview": "vite preview",
