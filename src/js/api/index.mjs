@@ -1,1 +1,3 @@
-export * from "../api/listings.mjs";
+import { getListings } from "./listings.mjs";
+
+getListings();
