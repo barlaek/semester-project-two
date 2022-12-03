@@ -8,6 +8,8 @@ export async function register(name, email, password) {
     headers: headers("application.json"),
   });
 
+  console.log(response);
+
   if (response.ok) {
     return await response.json();
   }
