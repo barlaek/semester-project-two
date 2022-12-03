@@ -1,4 +1,4 @@
-import { API_REGISTER } from "../api/apiPaths.mjs";
+import { API_LOGIN, API_REGISTER } from "../api/apiPaths.mjs";
 import { headers } from "./headers.mjs";
 
 export async function register(name, email, password) {
@@ -19,13 +19,17 @@ export async function register(name, email, password) {
 
 export async function registerListener(event) {
   event.preventDefault();
-  const form = event.target;
-  const data = new FormData(form);
-  const name = data.get("name");
-  const email = data.get("email");
-  const password = data.get("password");
-  await register(name, email, password);
-  location.reload();
+  try {
+    const form = event.target;
+    const data = new FormData(form);
+    const name = data.get("name");
+    const email = data.get("email");
+    const password = data.get("password");
+    register(name, email, password);
+    location.reload();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 document
@@ -39,3 +43,23 @@ const registeredUser = {
 };
 
 console.log(registeredUser);
+
+async function loginUser(email, password) {
+  try {
+    const response = await fetch(`${API_LOGIN}`, {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: headers("application.json"),
+    });
+
+    if (response.ok) {
+      return await response.json();
+    }
+
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+loginUser({ email: "bombombadil_ba@stud.noroff.no", password: "1234567890" });
