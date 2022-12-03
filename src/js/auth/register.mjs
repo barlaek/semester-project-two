@@ -3,7 +3,7 @@ import { headers } from "./headers.mjs";
 
 export async function register(name, email, password) {
   const response = await fetch(`${API_REGISTER}`, {
-    method: "post",
+    method: "POST",
     body: JSON.stringify({ name, email, password }),
     headers: headers("application.json"),
   });
@@ -29,5 +29,13 @@ export async function registerListener(event) {
 }
 
 document
-  .getElementById("form#registrationForm")
+  .getElementById("registrationForm")
   .addEventListener("submit", registerListener);
+
+const registeredUser = {
+  name: "bombombadil",
+  email: "bombombadil_ba@stud.noroff.no",
+  password: "1234567890",
+};
+
+console.log(registeredUser);
