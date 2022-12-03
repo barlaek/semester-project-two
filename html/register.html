@@ -14,9 +14,30 @@
 
     <main>
       <div id="registrationContainer">
-        <label for="name">
-          <input type="form" />
-        </label>
+        <form id="registrationForm">
+          <input
+            required
+            type="name"
+            name="name"
+            id="registerName"
+            placeholder="full name"
+          />
+          <input
+            required
+            type="email"
+            name="email"
+            id="registerEmail"
+            placeholder="email"
+          />
+          <input
+            required
+            type="password"
+            name="password"
+            id="registerPassword"
+            placeholder="password"
+          />
+          <button type="submit">Register</button>
+        </form>
       </div>
     </main>
   </body>
