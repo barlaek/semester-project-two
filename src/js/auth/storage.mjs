@@ -21,3 +21,13 @@ export function loadToken(key) {
     return null;
   }
 }
+
+/**
+ * Removes
+ * @param {token} key
+ * from the storage
+ */
+
+export function removeToken(key) {
+  localStorage.remove(key);
+}
