@@ -14,3 +14,14 @@ export async function register(name, email, password) {
 
   throw new Error(response.statusText);
 }
+
+export async function registerListener(event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = new FormData(form);
+  const name = data.get("name");
+  const email = data.get("email");
+  const password = data.get("password");
+  await register(name, email, password);
+  location.reload();
+}
