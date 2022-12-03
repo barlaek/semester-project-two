@@ -23,7 +23,7 @@ export async function registerListener(event) {
   const email = data.get("email");
   const password = data.get("password");
   await register(name, email, password);
-  //   location.reload();
+  location.reload();
 }
 
 document
