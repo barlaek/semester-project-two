@@ -36,7 +36,7 @@ import { headers } from "./headers.mjs";
 //   .getElementById("registrationForm")
 //   .addEventListener("submit", registerListener);
 
-const registeredUser = {
+export const registeredUser = {
   name: "aassjulebrus",
   email: "aassjulebrus@stud.noroff.no",
   password: "assjulebrus69",
@@ -59,7 +59,7 @@ export async function registerUser(user) {
 
 registerUser(registeredUser);
 
-const loginData = {
+export const loginData = {
   email: "bombombadil_ba@stud.noroff.no",
   password: "1234567890",
 };
