@@ -67,7 +67,7 @@ export const loginData = {
 export async function loginUser(user) {
   const postData = {
     method: "POST",
-    headers: headers,
+    headers: headers("application/json"),
     body: JSON.stringify(user),
   };
 
