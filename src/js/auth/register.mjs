@@ -57,7 +57,7 @@ export async function registerUser(user) {
   console.log(json);
 }
 
-registerUser();
+registerUser(registeredUser);
 
 const loginData = {
   email: "bombombadil_ba@stud.noroff.no",
@@ -73,7 +73,11 @@ export async function loginUser(user) {
 
   const response = await fetch(`${API_LOGIN}`, postData);
   console.log(response);
+  const json = await response.json();
+  console.log(json);
 }
+
+loginUser(loginData);
 // async function loginUser(loginData) {
 //   try {
 //     const response = await fetch(`${API_LOGIN}`, {
