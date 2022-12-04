@@ -4,9 +4,9 @@
  * @param {token} value
  */
 
-export function saveToken(key, value) {
+export const saveToken = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
-}
+};
 
 /**
  * Fetches the token from window storage
@@ -14,13 +14,13 @@ export function saveToken(key, value) {
  * @returns a parsed token
  */
 
-export function loadToken(key) {
+export const loadToken = (key) => {
   try {
-    return localStorage.getItem(JSON.parse(key));
+    return JSON.parse(localStorage.getItem(key));
   } catch {
     return null;
   }
-}
+};
 
 /**
  * Removes
@@ -28,6 +28,4 @@ export function loadToken(key) {
  * from the storage
  */
 
-export function removeToken(key) {
-  localStorage.removeItem(key);
-}
+export const removeToken = (key) => localStorage.remove(key);

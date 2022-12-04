@@ -3,10 +3,7 @@ import { headers } from "../auth/headers.mjs";
 import { loadToken } from "../auth/storage.mjs";
 
 export async function getProfiles() {
-  const response = await fetch(`${API_PROFILES}`, {
-    method: "GET",
-    headers: headers("application/json"),
-  });
+  const response = await fetch(`${API_PROFILES}`, { headers: headers()});
   console.log(response);
   const json = await response.json();
   console.log(json);
