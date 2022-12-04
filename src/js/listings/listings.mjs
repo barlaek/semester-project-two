@@ -1,4 +1,4 @@
-import { API_LISTINGS } from "./apiPaths.mjs";
+import { API_LISTINGS } from "../api/apiPaths.mjs";
 
 export async function getListings() {
   const response = await fetch(API_LISTINGS);
