@@ -1,6 +1,8 @@
 import { API_LOGIN, API_REGISTER } from "../api/apiPaths.mjs";
 import { headers } from "./headers.mjs";
 
+
+console.log(API_REGISTER)
 // export async function register(name, email, password) {
 //   const response = await fetch(`${API_REGISTER}`, {
 //     method: "POST",
@@ -47,7 +49,7 @@ console.log(registeredUser);
 export async function registerUser(user) {
   const postData = {
     method: "POST",
-    headers: headers,
+    headers: headers("application/json"),
     body: JSON.stringify(user),
   };
 
