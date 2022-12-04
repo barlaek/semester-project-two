@@ -4,4 +4,4 @@ export function logoutUser() {
   removeToken("token");
 }
 
-logoutUser();
+// logoutUser();
