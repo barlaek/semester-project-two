@@ -57,4 +57,4 @@ export async function registerUser(user) {
   console.log(json);
 }
 
-registerUser(registeredUser);
+// registerUser(registeredUser);

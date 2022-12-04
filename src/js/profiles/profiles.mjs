@@ -9,3 +9,14 @@ export async function getProfiles() {
 }
 
 getProfiles();
+
+export async function getProfile(name) {
+  const response = await fetch(`${API_PROFILES}/${name}?_listings=true`, {
+    headers: headers(),
+  });
+  console.log(response);
+  const json = await response.json();
+  console.log(json);
+}
+
+getProfile();

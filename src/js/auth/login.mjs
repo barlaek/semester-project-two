@@ -23,4 +23,4 @@ export const loginData = {
     }
   }
   
-  loginUser(loginData);
+//   loginUser(loginData);
