@@ -12,5 +12,7 @@ export const headers = (contentType) => {
     headers.Authorization = `Bearer ${token}`;
   }
 
+  console.log(token);
+
   return headers;
 };
