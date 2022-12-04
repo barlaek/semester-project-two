@@ -83,11 +83,6 @@ export async function loginUser(user) {
 
 loginUser(loginData);
 
-export function logoutUser() {
-  removeToken('token');
-}
-
-logoutUser();
 // async function loginUser(loginData) {
 //   try {
 //     const response = await fetch(`${API_LOGIN}`, {
