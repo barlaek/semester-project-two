@@ -3,24 +3,27 @@ import { headers } from "./headers.mjs";
 import { saveToken } from "./storage.mjs";
 
 export const loginData = {
-    email: "aassjulebrus@stud.noroff.no",
-    password: "assjulebrus69",
+  email: "aassjulebrus@stud.noroff.no",
+  password: "assjulebrus69",
+};
+
+export async function loginUser(user) {
+  const postData = {
+    method: "POST",
+    headers: headers("application/json"),
+    body: JSON.stringify(user),
   };
-  
-  export async function loginUser(user) {
-    const postData = {
-      method: "POST",
-      headers: headers("application/json"),
-      body: JSON.stringify(user),
-    };
-  
-    const response = await fetch(`${API_LOGIN}`, postData);
-    console.log(response);
-    const json = await response.json();
-    console.log(json);
-    if (response.ok) {
-      saveToken("token", json.accessToken);
-    }
+
+  const response = await fetch(`${API_LOGIN}`, postData);
+  console.log(response);
+  if (response.ok) {
+    const profile = await response.json();
+    saveToken("token", profile.accessToken);
+    delete profile.accessToken;
+    saveToken("profile", profile);
+    return profile;
+    console.log(profile);
   }
-  
-//   loginUser(loginData);
+}
+
+loginUser(loginData);
