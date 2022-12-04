@@ -1,4 +1,5 @@
 import { API_PROFILES } from "../api/apiPaths.mjs";
+import { profileUrl } from "../api/searchParams.mjs";
 import { headers } from "../auth/headers.mjs";
 
 export async function getProfiles() {
@@ -11,7 +12,7 @@ export async function getProfiles() {
 getProfiles();
 
 export async function getProfile(name) {
-  const response = await fetch(`${API_PROFILES}/${name}?_listings=true`, {
+  const response = await fetch(`${profileUrl}?_listings=true`, {
     headers: headers(),
   });
   console.log(response);
@@ -19,4 +20,4 @@ export async function getProfile(name) {
   console.log(json);
 }
 
-getProfile();
+getProfile("aassjulebrus");
