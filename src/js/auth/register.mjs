@@ -1,6 +1,6 @@
 import { API_LOGIN, API_REGISTER } from "../api/apiPaths.mjs";
 import { headers } from "./headers.mjs";
-import { saveToken } from "./storage.mjs";
+import { saveToken, removeToken } from "./storage.mjs";
 
 // export async function register(name, email, password) {
 //   const response = await fetch(`${API_REGISTER}`, {
@@ -82,6 +82,12 @@ export async function loginUser(user) {
 }
 
 loginUser(loginData);
+
+export function logoutUser() {
+  removeToken('token');
+}
+
+logoutUser();
 // async function loginUser(loginData) {
 //   try {
 //     const response = await fetch(`${API_LOGIN}`, {

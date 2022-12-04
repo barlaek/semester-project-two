@@ -29,5 +29,5 @@ export function loadToken(key) {
  */
 
 export function removeToken(key) {
-  localStorage.remove(key);
+  localStorage.removeItem(key);
 }
