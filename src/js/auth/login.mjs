@@ -46,6 +46,5 @@ export async function loginUser(user) {
     delete profile.accessToken;
     saveToken("profile", profile);
     return profile;
-    console.log(profile);
   }
 }
