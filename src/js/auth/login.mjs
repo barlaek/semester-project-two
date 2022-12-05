@@ -1,6 +1,6 @@
 import { API_LOGIN } from "../api/apiPaths.mjs";
 import { headers } from "./headers.mjs";
-import { saveToken } from "./storage.mjs";
+import { saveToken } from "../storage/index.mjs";
 
 export const loginData = {
   email: "aassjulebrus@stud.noroff.no",
