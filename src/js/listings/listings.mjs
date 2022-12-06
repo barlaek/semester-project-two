@@ -1,5 +1,4 @@
 import { API_LISTINGS } from "../api/apiPaths.mjs";
-import { loadToken } from "../storage/storage.mjs";
 import { headers } from "../auth/headers.mjs";
 
 export async function getListings() {
