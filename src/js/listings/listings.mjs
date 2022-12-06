@@ -9,11 +9,13 @@ export async function getListings() {
   };
   const response = await fetch(`${API_LISTINGS}`, getData);
   console.log(response);
-  if (response.ok) {
-    return await response.json();
-  }
+  const json = await response.json();
+  console.log(json);
+  // if (response.ok) {
+  //   return await response.json();
+  // }
 
-  throw new Error(response.statusText);
+  // throw new Error(response.statusText);
 }
 
 getListings();
