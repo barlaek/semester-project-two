@@ -36,11 +36,11 @@ import { headers } from "./headers.mjs";
 //   .getElementById("registrationForm")
 //   .addEventListener("submit", registerListener);
 
-export const registeredUser = {
-  name: "aassjulebrus",
-  email: "aassjulebrus@stud.noroff.no",
-  password: "assjulebrus69",
-};
+// export const registeredUser = {
+//   name: "aassjulebrus",
+//   email: "aassjulebrus@stud.noroff.no",
+//   password: "assjulebrus69",
+// };
 
 console.log(registeredUser);
 
