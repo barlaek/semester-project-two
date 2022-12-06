@@ -42,7 +42,7 @@ import { headers } from "./headers.mjs";
 //   password: "assjulebrus69",
 // };
 
-console.log(registeredUser);
+// console.log(registeredUser);
 
 export async function registerUser(user) {
   const postData = {

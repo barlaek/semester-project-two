@@ -10,5 +10,4 @@ export const form = document
       password: form.loginPassword.value,
     };
     loginUser(user);
-    console.log(user);
   });
