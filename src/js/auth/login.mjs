@@ -7,11 +7,11 @@ import { saveToken } from "../storage/index.mjs";
 //   password: "assjulebrus69",
 // };
 
-export async function loginUser(user) {
+export async function loginUser(email, password) {
   const postData = {
     method: "POST",
     headers: headers("application/json"),
-    body: JSON.stringify(user),
+    body: JSON.stringify({ email, password }),
   };
 
   const response = await fetch(`${API_LOGIN}`, postData);
