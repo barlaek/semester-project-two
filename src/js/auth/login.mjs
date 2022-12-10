@@ -20,7 +20,7 @@ export async function loginUser(email, password) {
     if (response.ok) {
       const profile = await response.json();
       saveToken("token", profile.accessToken);
-      // delete profile.accessToken;
+      delete profile.accessToken;
       saveToken("profile", profile);
       return profile;
     }
