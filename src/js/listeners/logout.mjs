@@ -1,7 +1,7 @@
 import { logoutUser } from "../auth/logout.mjs";
 
 export const logout = document
-  .getElementById("logoutForm")
+  .getElementById("logoutBtn")
   .addEventListener("submit", (event) => {
     event.preventDefault();
     logoutUser();
