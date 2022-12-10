@@ -9,5 +9,7 @@ export const form = document
     const email = data.get("email");
     const password = data.get("password");
     const { name } = loginUser(email, password);
-    window.location.replace = `/index.html?view=profile&name=${name}`;
+    window.location.replace = `/index.html/?view=profile&name=${name}`;
   });
+
+  
