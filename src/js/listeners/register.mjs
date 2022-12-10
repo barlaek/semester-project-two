@@ -10,5 +10,5 @@ export const newUser = document
     const email = data.get("email");
     const password = data.get("password");
     registerUser(name, email, password);
-    window.location.replace = `/html/login.html`;
+    window.location = `/html/login.html`;
   });

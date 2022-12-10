@@ -15,7 +15,7 @@ export const form = document
     const email = data.get("email");
     const password = data.get("password");
     const { name } = loginUser(email, password);
-    location.href = `/index.html?name=${name}`;
+    window.location = `/index.html?name=${name}`;
   });
 
 // export async function loginListener(event) {
