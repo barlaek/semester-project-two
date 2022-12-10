@@ -44,11 +44,11 @@ import { headers } from "./headers.mjs";
 
 // console.log(registeredUser);
 
-export async function registerUser(user) {
+export async function registerUser(name, email, password) {
   const postData = {
     method: "POST",
     headers: headers("application/json"),
-    body: JSON.stringify(user),
+    body: JSON.stringify({ name, email, password }),
   };
 
   const response = await fetch(`${API_REGISTER}`, postData);
