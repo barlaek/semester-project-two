@@ -5,5 +5,5 @@ export const logout = document
   .addEventListener("click", (event) => {
     event.preventDefault();
     logoutUser();
-    window.location.href = "/";
+    location.href = "/";
   });
