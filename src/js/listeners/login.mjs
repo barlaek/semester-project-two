@@ -15,7 +15,7 @@ export const form = document
     const email = data.get("email");
     const password = data.get("password");
     const { name } = loginUser(email, password);
-    window.location.replace = `/index.html?name=${name}`;
+    // window.location.replace = `/index.html?name=${name}`;
     console.log(data);
   });
 
