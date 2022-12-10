@@ -1,8 +1,16 @@
 import { API_PROFILES } from "./apiPaths.mjs";
 
-export const queryString = document.location.search;
-export const params = new URLSearchParams(queryString);
-export const name = params.get("name");
-export const profileUrl = `${API_PROFILES}/${name}`;
+export const getSearchParams = () => {
+  const url = new URL(window.location);
+  return Object.fromEntries(url.searchParams);
+};
 
-console.log(profileUrl);
+export const setSearchParams = () => {
+  const newParams = {
+    ...getSearchParams(),
+    ...params,
+  };
+
+  const searchParams = new URLSearchParams(newParams);
+  window.location.search = searchParams.toString;
+};
