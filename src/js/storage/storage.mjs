@@ -29,4 +29,3 @@ export const loadToken = (key) => {
  */
 
 export const removeToken = (key) => localStorage.removeItem(key);
-
