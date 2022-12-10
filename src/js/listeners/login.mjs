@@ -14,5 +14,5 @@ export const form = document
     const email = data.get("email");
     const password = data.get("password");
     const { name } = loginUser(email, password);
-    location.href = `index.html/?view=profile$name=${name}`;
+    window.location.replace = `/index.html?name=${name}`;
   });
