@@ -1,5 +1,5 @@
 import { API_PROFILES } from "../api/apiPaths.mjs";
-import { profileUrl } from "../api/searchParams.mjs";
+import { getSearchParams } from "../api/searchParams.mjs";
 import { headers } from "../auth/headers.mjs";
 
 // export async function getProfiles() {
