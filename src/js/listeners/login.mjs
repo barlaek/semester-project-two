@@ -1,5 +1,4 @@
 import { loginUser } from "../auth/login.mjs";
-import { API_PROFILES } from "../api/apiPaths.mjs";
 
 export const form = document
   .getElementById("loginForm")
