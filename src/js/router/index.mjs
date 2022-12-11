@@ -4,3 +4,34 @@ import { loadToken, saveToken } from "../storage/storage.mjs";
 import { getSearchParams } from "../api/searchParams.mjs";
 import { isLoggedIn } from "../auth/state.mjs";
 
+function authGuard(callback = () => {}, view = "") {
+  if (isLoggedIn()) {
+    return callback();
+  } else {
+    if (view) {
+      location.href = `/`;
+    }
+  }
+}
+
+async function route() {
+  const { view, listingId, name } = getSearchParams();
+  switch (view) {
+    case "listing":
+    /* Pass the single listing function through the authGuard function */
+
+    case "listings":
+    /* Passe the listings function through the authGuard function */
+
+    case "profile":
+    /* Pass the Single Profile function through the authGuard function */
+
+    case "profiles":
+    /* Pass the profiles function through the authGuard function */
+  }
+}
+
+export default async () => {
+  const view = await route();
+  /* Call the UI function and pass in the view variable*/
+};
