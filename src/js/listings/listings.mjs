@@ -13,9 +13,9 @@ export async function getListings(limit = 20, offset = 0) {
     getData
   );
   console.log(response);
-  const json = await response.json();
-  console.log(json);
-  viewListings(json);
+  const listings = await response.json();
+  console.log(listings);
+  viewListings(listings);
 }
 
 getListings();
