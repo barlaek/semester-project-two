@@ -16,4 +16,6 @@
 
 // import { logout } from "./src/js/listeners/logout.mjs";
 
-import { getListings } from "./src/js/listings/listings.mjs";
+// import { getListings } from "./src/js/listings/listings.mjs";
+
+import { search } from "./src/js/listings/search.mjs";
