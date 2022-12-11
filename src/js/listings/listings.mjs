@@ -9,7 +9,7 @@ export async function getListings(limit = 20, offset = 0) {
     body: JSON.stringify(),
   };
   const response = await fetch(
-    `${API_LISTINGS}?limit=${limit}&${offset}`,
+    `${API_LISTINGS}?limit=${limit}&${offset}_seller=true&_bids=true`,
     getData
   );
   console.log(response);
