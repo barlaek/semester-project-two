@@ -22,10 +22,11 @@ async function route() {
     /* Pass the single listing function through the authGuard function */
 
     case "listings":
-        return authGuard(async () => {
-            const listings = await getListings()
-            return viewListings(listings)
-        })
+      return authGuard(async () => {
+        const listings = await getListings();
+        console.log(listings);
+        return viewListings(listings);
+      });
     /* Passe the listings function through the authGuard function */
 
     case "profile":
