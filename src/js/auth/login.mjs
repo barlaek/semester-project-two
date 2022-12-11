@@ -17,13 +17,15 @@ export async function loginUser(email, password) {
 
     const response = await fetch(`${API_LOGIN}`, postData);
     console.log(response);
-    if (response.ok) {
-      const profile = await response.json();
-      saveToken("token", profile.accessToken);
-      delete profile.accessToken;
-      saveToken("profile", profile);
-      return profile;
-    }
+    const profile = await response.json();
+    console.log(profile)
+    // if (response.ok) {
+    //   const profile = await response.json();
+    //   saveToken("token", profile.accessToken);
+    //   delete profile.accessToken;
+    //   saveToken("profile", profile);
+    //   return profile;
+    // }
   } catch (error) {
     console.log(error);
   }

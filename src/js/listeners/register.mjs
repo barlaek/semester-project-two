@@ -5,10 +5,17 @@ export const newUser = document
   .addEventListener("submit", (event) => {
     event.preventDefault();
     const form = event.target;
-    const data = new FormData(form);
-    const name = data.get("name");
-    const email = data.get("email");
-    const password = data.get("password");
-    registerUser(name, email, password);
-    window.location = `/html/login.html`;
+    const newUser = {
+      name: form.registerName.value,
+      email: form.registerEmail.value,
+      password: form.registerPassword.value,
+    };
+    registerUser(newUser)
+    console.log(newUser)
+    // const data = new FormData(form);
+    // const name = data.get("name");
+    // const email = data.get("email");
+    // const password = data.get("password");
+    // registerUser(name, email, password);
+    // window.location = `/html/login.html`;
   });

@@ -4,6 +4,10 @@
 // import * as listings from "/src/js/listings";
 // import * as listeners from "/src/js/listeners/index";
 
-import router from "./src/js/router/index.mjs";
+// import router from "./src/js/router/index.mjs";
 
-router();
+// router();
+
+import { newUser } from "./src/js/listeners/register.mjs";
+
+import { form } from "./src/js/listeners/login.mjs";
