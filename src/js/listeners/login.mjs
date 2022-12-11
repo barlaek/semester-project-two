@@ -1,4 +1,5 @@
 import { loginUser } from "../auth/login.mjs";
+import { loadToken } from "../storage/storage.mjs";
 
 export const form = document
   .getElementById("loginForm")
@@ -10,21 +11,7 @@ export const form = document
       password: form.loginPassword.value,
     };
     loginUser(user);
-    console.log(user);
-    // const data = new FormData(form);
-    // const email = data.get("email");
-    // const password = data.get("password");
-    // const { name } = loginUser(email, password);
-    // console.log(name)
-    // window.location = `/index.html?name=${name}`;
+    const profile = loadToken("profile");
+    console.log(profile);
+    window.location = `/index.html?name=${profile.name}`;
   });
-
-// export async function loginListener(event) {
-//   event.preventDefault();
-//   const form = event.target;
-//   const data = new FormData(form);
-//   const email = data.get("email");
-//   const password = data.get("password");
-//   const { name } = await loginUser(email, password);
-//   window.location.replace = `/index.html?name=${name}`;
-// }
