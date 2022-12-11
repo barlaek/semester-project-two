@@ -8,14 +8,12 @@ export async function getListings() {
     body: JSON.stringify(),
   };
   const response = await fetch(`${API_LISTINGS}`, getData);
-  // console.log(response);
+  console.log(response);
   const json = await response.json();
-  // console.log(json);
+  console.log(json);
   // if (response.ok) {
   //   return await response.json();
   // }
 
   // throw new Error(response.statusText);
 }
-
-getListings();

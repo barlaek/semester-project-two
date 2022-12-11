@@ -3,3 +3,7 @@
 // import * as profiles from "/src/js/profiles";
 // import * as listings from "/src/js/listings";
 // import * as listeners from "/src/js/listeners/index";
+
+import router from "./src/js/router/index.mjs";
+
+router();

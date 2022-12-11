@@ -1,8 +1,9 @@
 import { getListings } from "../listings/listings.mjs";
-import { getProfiles } from "../profiles/profiles.mjs";
+// import { getProfiles } from "../profiles/profiles.mjs";
 import { loadToken, saveToken } from "../storage/storage.mjs";
 import { getSearchParams } from "../api/searchParams.mjs";
 import { isLoggedIn } from "../auth/state.mjs";
+import { viewListings } from "../ui/listings.mjs";
 
 function authGuard(callback = () => {}, view = "") {
   if (isLoggedIn()) {
@@ -21,6 +22,10 @@ async function route() {
     /* Pass the single listing function through the authGuard function */
 
     case "listings":
+        return authGuard(async () => {
+            const listings = await getListings()
+            return viewListings(listings)
+        })
     /* Passe the listings function through the authGuard function */
 
     case "profile":
