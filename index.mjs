@@ -8,6 +8,8 @@
 
 // router();
 
-import { newUser } from "./src/js/listeners/register.mjs";
+// import { newUser } from "./src/js/listeners/register.mjs";
 
 import { form } from "./src/js/listeners/login.mjs";
+
+/**ostepop ostepop@noroff.no ostepop69 */

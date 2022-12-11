@@ -7,18 +7,23 @@ import { saveToken } from "../storage/index.mjs";
 //   password: "assjulebrus69",
 // };
 
-export async function loginUser(email, password) {
+export async function loginUser(user) {
   try {
     const postData = {
       method: "POST",
-      body: JSON.stringify(email, password),
+      body: JSON.stringify(user),
       headers: headers("application/json"),
     };
 
     const response = await fetch(`${API_LOGIN}`, postData);
     console.log(response);
     const profile = await response.json();
-    console.log(profile)
+    console.log(profile);
+    if (response.ok) {
+      saveToken("token", profile.accessToken);
+      saveToken("profile", profile);
+      return;
+    }
     // if (response.ok) {
     //   const profile = await response.json();
     //   saveToken("token", profile.accessToken);
