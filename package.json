@@ -1,6 +1,6 @@
 {
   "name": "semester-project-two",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Auction site for semester project for Noroff",
   "type": "module",
   "main": "index.js",
