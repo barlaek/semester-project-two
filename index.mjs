@@ -10,6 +10,8 @@
 
 // import { newUser } from "./src/js/listeners/register.mjs";
 
-import { form } from "./src/js/listeners/login.mjs";
+// import { form } from "./src/js/listeners/login.mjs";
 
 /**ostepop ostepop@noroff.no ostepop69 */
+
+import { logout } from "./src/js/listeners/logout.mjs";
