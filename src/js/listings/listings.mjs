@@ -11,9 +11,18 @@ export async function getListings() {
   console.log(response);
   const json = await response.json();
   console.log(json);
-  // if (response.ok) {
-  //   return await response.json();
-  // }
+}
 
-  // throw new Error(response.statusText);
+export async function getListing(id) {
+  const getData = {
+    method: "GET",
+    headers: headers("application/json"),
+    body: JSON.stringify(),
+  };
+  const response = await fetch(
+    `${API_LISTINGS}/${id}?_seller=true&_bids=true`,
+    getData
+  );
+  const json = await response.json();
+  console.log(json)
 }

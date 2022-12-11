@@ -1,4 +1,4 @@
-import { getListings } from "../listings/listings.mjs";
+import { getListings, getListing } from "../listings/listings.mjs";
 // import { getProfiles } from "../profiles/profiles.mjs";
 import { loadToken, saveToken } from "../storage/storage.mjs";
 import { getSearchParams } from "../api/searchParams.mjs";
@@ -19,6 +19,11 @@ async function route() {
   const { view, listingId, name } = getSearchParams();
   switch (view) {
     case "listing":
+      return authGuard(async () => {
+        const listing = await getListing();
+        console.log(listing);
+        return viewListings(listing);
+      });
     /* Pass the single listing function through the authGuard function */
 
     case "listings":
