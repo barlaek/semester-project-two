@@ -1,10 +1,12 @@
+export const listingsContainer = document.getElementById("listingsContainer");
+
 export function viewListings(listings) {
-  const listingsContainer = document.getElementById("listingsContainer");
   listingsContainer.innerHTML = "";
-  if(listings) {
-    return listingsContainer +=
-        `<div>
-            <h4>${listings.title}</h4>
-        </div>`
+  if (listings) {
+    listings.forEach((listing) => {
+      return (listingsContainer += `<div>
+            <h4>${listing.title}</h4>
+        </div>`);
+    });
   }
 }
