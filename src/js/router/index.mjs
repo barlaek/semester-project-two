@@ -26,7 +26,7 @@ async function route() {
         const listings = await getListings();
         console.log(listings);
         return viewListings(listings);
-      });
+      }, view);
     /* Passe the listings function through the authGuard function */
 
     case "profile":
