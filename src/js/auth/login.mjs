@@ -21,6 +21,7 @@ export async function loginUser(user) {
     console.log(profile);
     if (response.ok) {
       saveToken("token", profile.accessToken);
+      delete profile.accessToken;
       saveToken("profile", profile);
       return;
     }
