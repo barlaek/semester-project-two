@@ -6,17 +6,21 @@
 
 // import router from "./src/js/router/index.mjs";
 
+// // import router from "./src/js/router/index.mjs";
+
+// // router();
+
+// // import { newUser } from "./src/js/listeners/register.mjs";
+
+// // import { form } from "./src/js/listeners/login.mjs";
+
+// /**ostepop ostepop@noroff.no ostepop69 */
+
+// // import { logout } from "./src/js/listeners/logout.mjs";
+
+// // import { getListings } from "./src/js/listings/listings.mjs";
+
+// // import { search } from "./src/js/listings/search.mjs";
+// // import { listingPage } from "./src/js/ui/listing.mjs";
+
 // router();
-
-// import { newUser } from "./src/js/listeners/register.mjs";
-
-// import { form } from "./src/js/listeners/login.mjs";
-
-/**ostepop ostepop@noroff.no ostepop69 */
-
-// import { logout } from "./src/js/listeners/logout.mjs";
-
-// import { getListings } from "./src/js/listings/listings.mjs";
-
-import { search } from "./src/js/listings/search.mjs";
-import { listingPage } from "./src/js/ui/listing.mjs";

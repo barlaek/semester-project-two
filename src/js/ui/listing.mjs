@@ -14,3 +14,5 @@ export const listingPage = async (listingId) => {
     console.log(listing);
   }
 };
+
+// listingPage();
