@@ -18,6 +18,8 @@
 
 // /**ostepop ostepop@noroff.no ostepop69 */
 
+import { createListing } from "./src/js/ui/header.mjs";
+
 import { logout } from "./src/js/listeners/logout.mjs";
 
 import { getListings } from "./src/js/listings/listings.mjs";
