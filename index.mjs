@@ -19,3 +19,4 @@
 // import { getListings } from "./src/js/listings/listings.mjs";
 
 import { search } from "./src/js/listings/search.mjs";
+import { listingPage } from "./src/js/ui/listing.mjs";
