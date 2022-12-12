@@ -1,14 +1,22 @@
+import { doc } from "prettier";
 import { loadToken } from "../storage/storage.mjs";
 
+export const registerBtn = document
+  .getElementById("registerBtn")
+  .addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location = `/html/register.html`;
+  });
+
 export const loginBtn = document
-  .getElementById("login")
+  .getElementById("loginBtn")
   .addEventListener("click", (event) => {
     event.preventDefault();
     window.location = `/html/login.html`;
   });
 
 export const createListing = document
-  .getElementById("createListing")
+  .getElementById("createBtn")
   .addEventListener("click", (event) => {
     event.preventDefault();
     const profile = loadToken("profile");
