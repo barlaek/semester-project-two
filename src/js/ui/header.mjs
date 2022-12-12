@@ -1,4 +1,3 @@
-import { doc } from "prettier";
 import { loadToken } from "../storage/storage.mjs";
 
 export const registerBtn = document
