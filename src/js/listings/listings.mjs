@@ -18,7 +18,7 @@ export async function getListings(limit = 20, offset = 0) {
   viewListings(listings);
 }
 
-// getListings();
+getListings();
 
 export async function getListing(id) {
   const getData = {
