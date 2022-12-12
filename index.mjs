@@ -18,7 +18,7 @@
 
 // /**ostepop ostepop@noroff.no ostepop69 */
 
-import { createListing } from "./src/js/ui/header.mjs";
+import * as header from "./src/js/ui/header.mjs";
 
 import { logout } from "./src/js/listeners/logout.mjs";
 
