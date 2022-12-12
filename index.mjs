@@ -4,6 +4,8 @@
 // import * as listings from "/src/js/listings";
 // import * as listeners from "/src/js/listeners/index";
 
+import { createListing } from "./src/js/listings/createListing.mjs";
+
 // import router from "./src/js/router/index.mjs";
 
 // // import router from "./src/js/router/index.mjs";
@@ -24,4 +26,5 @@
 // // import { listingPage } from "./src/js/ui/listing.mjs";
 
 // router();
-import * as index from "./src/js/listings/index.mjs";
+// import * as index from "./src/js/listings/index.mjs";
+
