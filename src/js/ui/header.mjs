@@ -5,5 +5,5 @@ export const createListing = document
   .addEventListener("click", (event) => {
     event.preventDefault();
     const profile = loadToken("profile");
-    window.location = `<a href="/html/createListing.html?name=${profile.name}</a>`;
+    window.location = `/html/createListing.html?name=${profile.name}`;
   });
