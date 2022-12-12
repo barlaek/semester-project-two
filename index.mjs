@@ -4,7 +4,7 @@
 // import * as listings from "/src/js/listings";
 // import * as listeners from "/src/js/listeners/index";
 
-import { createListing } from "./src/js/listings/createListing.mjs";
+// import { createListing } from "./src/js/listings/createListing.mjs";
 
 // import router from "./src/js/router/index.mjs";
 
@@ -18,13 +18,12 @@ import { createListing } from "./src/js/listings/createListing.mjs";
 
 // /**ostepop ostepop@noroff.no ostepop69 */
 
-// // import { logout } from "./src/js/listeners/logout.mjs";
+import { logout } from "./src/js/listeners/logout.mjs";
 
-// // import { getListings } from "./src/js/listings/listings.mjs";
+import { getListings } from "./src/js/listings/listings.mjs";
 
 // // import { search } from "./src/js/listings/search.mjs";
 // // import { listingPage } from "./src/js/ui/listing.mjs";
 
 // router();
 // import * as index from "./src/js/listings/index.mjs";
-
