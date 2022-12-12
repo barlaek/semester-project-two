@@ -24,5 +24,4 @@
 // // import { listingPage } from "./src/js/ui/listing.mjs";
 
 // router();
-
-import * as index from "./src/js/listings/index.mjs"
+import * as index from "./src/js/listings/index.mjs";
