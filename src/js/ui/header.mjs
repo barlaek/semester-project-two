@@ -1,4 +1,6 @@
 import { loadToken } from "../storage/storage.mjs";
+import { logoutUser } from "../auth/logout.mjs";
+import { getListings } from "../listings/listings.mjs";
 
 export async function header() {
   const registerBtn = document
@@ -30,4 +32,6 @@ export async function header() {
       logoutUser();
       location.href = "/";
     });
+
+  getListings();
 }

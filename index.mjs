@@ -4,6 +4,8 @@
 // import * as listings from "/src/js/listings";
 // import * as listeners from "/src/js/listeners/index";
 
+import { header } from "./src/js/ui/header.mjs";
+
 // import { createListing } from "./src/js/listings/createListing.mjs";
 
 // import router from "./src/js/router/index.mjs";
@@ -18,14 +20,16 @@
 
 // /**ostepop ostepop@noroff.no ostepop69 */
 
-import * as header from "./src/js/ui/header.mjs";
+// import * as header from "./src/js/ui/header.mjs";
 
 // import { logout } from "./src/js/listeners/logout.mjs";
 
-import { getListings } from "./src/js/listings/listings.mjs";
+// import { getListings } from "./src/js/listings/listings.mjs";
 
 // // import { search } from "./src/js/listings/search.mjs";
 // // import { listingPage } from "./src/js/ui/listing.mjs";
 
 // router();
 // import * as index from "./src/js/listings/index.mjs";
+
+header()
