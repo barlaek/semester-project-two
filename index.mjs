@@ -20,7 +20,7 @@
 
 import * as header from "./src/js/ui/header.mjs";
 
-import { logout } from "./src/js/listeners/logout.mjs";
+// import { logout } from "./src/js/listeners/logout.mjs";
 
 import { getListings } from "./src/js/listings/listings.mjs";
 
