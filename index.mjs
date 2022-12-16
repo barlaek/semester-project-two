@@ -4,7 +4,8 @@
 // import * as listings from "/src/js/listings";
 // import * as listeners from "/src/js/listeners/index";
 
-import { header } from "./src/js/ui/header.mjs";
+// import { listing } from "./src/js/listings/listing.mjs";
+import { header, indexList } from "./src/js/ui/header.mjs";
 
 // import { createListing } from "./src/js/listings/createListing.mjs";
 
@@ -32,4 +33,6 @@ import { header } from "./src/js/ui/header.mjs";
 // router();
 // import * as index from "./src/js/listings/index.mjs";
 
-header()
+header();
+// indexList();
+// listing()

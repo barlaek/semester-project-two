@@ -1,5 +1,6 @@
 import { API_LISTINGS } from "../api/apiPaths.mjs";
 import { headers } from "../auth/headers.mjs";
+import { viewListing } from "../ui/listing.mjs";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -15,4 +16,7 @@ export async function getListing() {
   const response = await fetch(`${url}`, getData);
   const json = await response.json();
   console.log(json);
+  viewListing(json)
 }
+
+getListing();

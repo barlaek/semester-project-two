@@ -66,3 +66,7 @@ export async function header() {
   //     viewListings(filteredListings);
   //   });
 }
+
+export async function indexList() {
+  getListings();
+}
