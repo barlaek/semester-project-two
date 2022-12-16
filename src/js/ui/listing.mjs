@@ -30,7 +30,10 @@ export function viewListing(listing) {
                 <ul>
                     <li>${listing._count.bids}</li>
                 </ul>
-                <button type="button" id="bid">bid</button>
+            <form id="bidForm"
+                <input type="bid" name="bid" id="bidInput" placeholder="bid" />
+                <button type="submit" id="bid">bid</button>
+            </form>
             </div>
             <div>
                 <h4>${listing.seller.name}</h4>
