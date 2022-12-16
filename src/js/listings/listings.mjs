@@ -8,10 +8,7 @@ export async function getListings() {
     headers: headers("application/json"),
     body: JSON.stringify(),
   };
-  const response = await fetch(
-    `${API_LISTINGS}`,
-    getData
-  );
+  const response = await fetch(`${API_LISTINGS}`, getData);
   console.log(response);
   const listings = await response.json();
   console.log(listings);
@@ -55,13 +52,16 @@ function search(listings) {
 function filter(listings) {
   const filterBtn = document.getElementById("filterButton");
   filterBtn.onclick = function () {
-    const newDate = new Date();
-    const recently = newDate.setDate(newDate.getDate() - 2);
-    const filtered = listings.filter((listing) => {
-      if (listing.created >= recently.toString()) {
-        return true;
-      }
-    });
+    const recently = new Date(
+      new Date().setDate(new Date().getDate() - 2)
+    ).toISOString();
+    // const recently = newDate.setDate(newDate.getDate() - 2);
+    const filtered = listings.filter((listing) => listing.created >= recently);
+    // const filtered = listings.filter((listing) => {
+    //   if (listing.created >= recently.toString()) {
+    //     return true;
+    //   }
+    // });
     console.log(filtered);
     viewListings(filtered);
   };
