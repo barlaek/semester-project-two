@@ -11,13 +11,14 @@ import { headers } from "../auth/headers.mjs";
 
 // getProfiles();
 
-// export async function getProfile(name) {
-//   const response = await fetch(`${profileUrl}?_listings=true`, {
-//     headers: headers(),
-//   });
-//   console.log(response);
-//   const json = await response.json();
-//   console.log(json);
-// }
+export async function getProfiles() {
+  const response = await fetch(`${API_PROFILES}`, {
+    headers: headers("application/json"),
+    body: JSON.stringify(),
+  });
+  console.log(response);
+  const json = await response.json();
+  console.log(json);
+}
 
-// getProfile("aassjulebrus");
+getProfiles();
