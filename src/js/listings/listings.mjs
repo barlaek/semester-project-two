@@ -17,6 +17,7 @@ export async function getListings(limit = 20, offset = 0) {
   console.log(listings);
   viewListings(listings);
   search(listings);
+  filter(listings);
 }
 
 function search(listings) {
@@ -34,6 +35,23 @@ function search(listings) {
     console.log(filteredListings);
     viewListings(filteredListings);
   };
+}
+
+function filter(listings) {
+  const filterBtn = document.getElementById("filterButton");
+  filterBtn.onclick = function () {
+    const filteredListing = listings.slice((listing) => {
+      if (listing.sort((a, b) => a.endsAt - b.endsAt)) {
+        return true;
+      }
+    });
+    console.log(filteredListing);
+    viewListings(filteredListing);
+  };
+  // filterBtn.addEventListener("click", (listings) => {
+  //   const filteredListing = listing
+  //     .slice()
+  //     .sort((listing, listingA) => a.endsAt - b.endsAt);
 }
 
 // getListings();
