@@ -50,5 +50,5 @@ export async function header() {
   //     createListing(newListing);
   //   });
 
-  // getListings();
+  getListings();
 }
