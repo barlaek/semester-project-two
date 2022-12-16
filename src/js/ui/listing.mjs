@@ -32,6 +32,9 @@ export function viewListing(listing) {
                 </ul>
                 <button type="button" id="bid">bid</button>
             </div>
+            <div>
+                <h4>${listing.seller.name}</h4>
+            </div>
         </div>`;
   }
 }
