@@ -9,8 +9,8 @@ export const listingForm = document
     const newListing = {
       title: form.title.value,
       description: form.description.value,
-      tags: form.tags.value,
-      media: form.newMedia.value,
+      tags: Array.of(form.tags.value),
+      media: Array.of(form.newMedia.value.toString()),
       endsAt: new Date(form.endsAt.value).toString(),
     };
     console.log(newListing);
