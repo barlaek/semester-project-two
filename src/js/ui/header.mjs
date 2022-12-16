@@ -27,6 +27,14 @@ export async function header() {
       window.location = `/html/createListing.html?name=${profile.name}`;
     });
 
+  const profile = document
+    .getElementById("profile")
+    .addEventListener("click", (event) => {
+      event.preventDefault();
+      const profile = loadToken("profile");
+      window.location = `/html/profile.html?name=${profile.name}`;
+    });
+
   const logout = document
     .getElementById("logoutBtn")
     .addEventListener("click", (event) => {
