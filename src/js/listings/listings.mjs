@@ -2,14 +2,14 @@ import { API_LISTINGS } from "../api/apiPaths.mjs";
 import { headers } from "../auth/headers.mjs";
 import { viewListings } from "../ui/listings.mjs";
 
-export async function getListings(limit = 20, offset = 0) {
+export async function getListings() {
   const getData = {
     method: "GET",
     headers: headers("application/json"),
     body: JSON.stringify(),
   };
   const response = await fetch(
-    `${API_LISTINGS}?limit=${limit}&${offset}_seller=true&_bids=true`,
+    `${API_LISTINGS}`,
     getData
   );
   console.log(response);
