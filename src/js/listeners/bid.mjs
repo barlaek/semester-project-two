@@ -9,4 +9,5 @@ export const bid = document
       amount: form.bidInput.value,
     };
     placeBid(bid);
+    console.log(bid);
   });
