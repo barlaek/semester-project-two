@@ -10,4 +10,5 @@ export const bid = document
     };
     placeBid(bid);
     console.log(bid);
+    window.location.reload()
   });
