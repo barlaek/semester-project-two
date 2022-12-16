@@ -34,21 +34,21 @@ export async function header() {
       location.href = "/";
     });
 
-  const listingForm = document
-    .getElementById("newListingContainer")
-    .addEventListener("submit", (event) => {
-      event.preventDefault();
-      const form = event.target;
-      const newListing = {
-        title: form.title.value,
-        description: form.description.value,
-        tags: form.tags.value,
-        media: form.newMedia.value,
-        endsAt: new Date(""),
-      };
-      console.log(newListing);
-      createListing(newListing);
-    });
+  // const listingForm = document
+  //   .getElementById("newListingContainer")
+  //   .addEventListener("submit", (event) => {
+  //     event.preventDefault();
+  //     const form = event.target;
+  //     const newListing = {
+  //       title: form.title.value,
+  //       description: form.description.value,
+  //       tags: form.tags.value,
+  //       media: form.newMedia.value,
+  //       endsAt: new Date(""),
+  //     };
+  //     console.log(newListing);
+  //     createListing(newListing);
+  //   });
 
-  getListings();
+  // getListings();
 }
