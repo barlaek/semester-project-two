@@ -15,6 +15,7 @@ export async function getListings() {
   viewListings(listings);
   search(listings);
   filterByRecently(listings);
+  filterByPopularity(listings);
 }
 
 function search(listings) {
@@ -41,6 +42,15 @@ function filterByRecently(listings) {
       new Date().setDate(new Date().getDate() - 2)
     ).toISOString();
     const filtered = listings.filter((listing) => listing.created >= recently);
+    console.log(filtered);
+    viewListings(filtered);
+  };
+}
+
+function filterByPopularity(listings) {
+  const filterBtn = document.getElementById("filterPopular");
+  filterBtn.onclick = function () {
+    const filtered = listings.filter((listing) => listing._count.bids >= 10);
     console.log(filtered);
     viewListings(filtered);
   };
