@@ -57,7 +57,11 @@ function filter(listings) {
   filterBtn.onclick = function () {
     const newDate = new Date();
     const recently = newDate.setDate(newDate.getDate() - 2);
-    const filtered = listings.filter((listing) => listing.created >= recently);
+    const filtered = listings.filter((listing) => {
+      if (listing.created >= recently.toString()) {
+        return true;
+      }
+    });
     console.log(filtered);
     viewListings(filtered);
   };
