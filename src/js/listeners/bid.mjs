@@ -8,6 +8,6 @@ export const bid = document
     const bid = {
       amount: parseInt(form.placeBid.value),
     };
-    // placeBid(+bid);
+    placeBid(bid);
     console.log(bid);
   });
