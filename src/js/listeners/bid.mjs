@@ -6,8 +6,8 @@ export const bid = document
     event.preventDefault();
     const form = event.target;
     const bid = {
-      amount: form.bidInput.value,
+      amount: parseInt(form.bidInput.value),
     };
-    placeBid(bid);
+    // placeBid(+bid);
     console.log(bid);
   });
