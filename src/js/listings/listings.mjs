@@ -16,22 +16,37 @@ export async function getListings(limit = 20, offset = 0) {
   const listings = await response.json();
   console.log(listings);
   viewListings(listings);
+  search(listings);
+}
+
+function search(listings) {
+  const search = document.getElementById("search");
+  search.onkeyup = function (event) {
+    const searchString = event.target.value.trim().toLowerCase();
+    const filteredListings = listings.filter((listing) => {
+      if (listing.title.toLowerCase().includes(searchString)) {
+        return true;
+      }
+    });
+    console.log(filteredListings);
+    viewListings(filteredListings);
+  };
 }
 
 // getListings();
 
-export async function getListing(id) {
-  const getData = {
-    method: "GET",
-    headers: headers("application/json"),
-    body: JSON.stringify(),
-  };
-  const response = await fetch(
-    `${API_LISTINGS}/${id}?_seller=true&_bids=true`,
-    getData
-  );
-  const json = await response.json();
-  console.log(json);
-}
+// export async function getListing(id) {
+//   const getData = {
+//     method: "GET",
+//     headers: headers("application/json"),
+//     body: JSON.stringify(),
+//   };
+//   const response = await fetch(
+//     `${API_LISTINGS}/${id}?_seller=true&_bids=true`,
+//     getData
+//   );
+//   const json = await response.json();
+//   console.log(json);
+// }
 
 // getListing("9af14798-d6b7-4c06-8fc8-09c1fa1c09bb");
