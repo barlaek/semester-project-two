@@ -1,7 +1,7 @@
 import { placeBid } from "../listings/bid.mjs";
 
 export const bid = document
-  .getElementById("bid")
+  .getElementById("bidForm")
   .addEventListener("submit", (event) => {
     event.preventDefault();
     const form = event.target;
