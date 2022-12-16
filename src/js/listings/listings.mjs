@@ -34,55 +34,17 @@ function search(listings) {
   };
 }
 
-// function filter(listings) {
-//   const filterBtn = document
-//     .getElementById("filterButton")
-//     .addEventListener("click", (event) => {
-//       event.preventDefault();
-//       const recently = new Date();
-//       const newest = listings.filter(
-//         (listing) =>
-//           listing.created === recently.setDate(recently.getDate() - 2)
-//       );
-//       console.log(newest);
-//       viewListings(newest);
-//     });
-// }
-
 function filter(listings) {
   const filterBtn = document.getElementById("filterButton");
   filterBtn.onclick = function () {
     const recently = new Date(
       new Date().setDate(new Date().getDate() - 2)
     ).toISOString();
-    // const recently = newDate.setDate(newDate.getDate() - 2);
     const filtered = listings.filter((listing) => listing.created >= recently);
-    // const filtered = listings.filter((listing) => {
-    //   if (listing.created >= recently.toString()) {
-    //     return true;
-    //   }
-    // });
     console.log(filtered);
     viewListings(filtered);
   };
 }
-
-// function filter(listings) {
-//   const filterBtn = document.getElementById("filterButton");
-//   filterBtn.onclick = function () {
-//     const filteredListing = listings.slice((listing) => {
-//       if (listing.sort((a, b) => a.endsAt - b.endsAt)) {
-//         return true;
-//       }
-//     });
-//     console.log(filteredListing);
-//     viewListings(filteredListing);
-//   };
-//   // filterBtn.addEventListener("click", (listings) => {
-//   //   const filteredListing = listing
-//   //     .slice()
-//   //     .sort((listing, listingA) => a.endsAt - b.endsAt);
-// }
 
 // getListings();
 
