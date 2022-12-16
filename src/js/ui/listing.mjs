@@ -21,7 +21,7 @@ export async function viewListing(listing) {
   const listingContainer = document.getElementById("listingContainer");
   listingContainer.innerHTML = "";
   if (listing) {
-    listingContainer.innerHTML += `<div>
+    listingContainer.innerHTML = `<div>
             <img src="${listing.media}" alt="${listing.description}">
             <div>
                 <h2>${listing.title}</h2>
@@ -32,7 +32,7 @@ export async function viewListing(listing) {
                 </ul>
             </div>
             <div>
-                <h4>${listing.seller.name}</h4>
+                <a href="/html/profile.html?name="${listing.seller.name}">${listing.seller.name}</a>
             </div>
         </div>`;
   }
