@@ -5,7 +5,7 @@ import { viewListing } from "../ui/listing.mjs";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = `${API_LISTINGS}/${id}?_seller=true&bids=true`;
+const url = `${API_LISTINGS}/${id}?_seller=true&_bids=true`;
 
 export async function getListing() {
   const getData = {

@@ -28,7 +28,7 @@ export async function viewListing(listing) {
                 <p>${listing.description}</p>
                 <h4>current bids:</h4>
                 <ul>
-                    <li>${listing._count.bids}</li>
+                    <li>${listing.bids.amount}</li>
                 </ul>
             </div>
             <div>
