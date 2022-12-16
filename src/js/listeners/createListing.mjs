@@ -11,7 +11,7 @@ export const listingForm = document
       description: form.description.value,
       tags: form.tags.value,
       media: form.newMedia.value,
-      endsAt: form.endsAt.value,
+      endsAt: new Date(form.endsAt.value),
     };
     console.log(newListing);
     createListing(newListing);
