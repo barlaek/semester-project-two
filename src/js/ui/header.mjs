@@ -51,7 +51,7 @@ export async function header() {
   //     createListing(newListing);
   //   });
 
-  getListings();
+  // getListings();
 
   // let listings = [];
 
