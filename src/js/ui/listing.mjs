@@ -17,7 +17,7 @@
 
 // listingPage();
 
-export function viewListing(listing) {
+export async function viewListing(listing) {
   const listingContainer = document.getElementById("listingContainer");
   listingContainer.innerHTML = "";
   if (listing) {
