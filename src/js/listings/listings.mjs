@@ -14,7 +14,7 @@ export async function getListings() {
   console.log(listings);
   viewListings(listings);
   search(listings);
-  filter(listings);
+  filterByRecently(listings);
 }
 
 function search(listings) {
@@ -34,8 +34,8 @@ function search(listings) {
   };
 }
 
-function filter(listings) {
-  const filterBtn = document.getElementById("filterButton");
+function filterByRecently(listings) {
+  const filterBtn = document.getElementById("filterRecent");
   filterBtn.onclick = function () {
     const recently = new Date(
       new Date().setDate(new Date().getDate() - 2)
