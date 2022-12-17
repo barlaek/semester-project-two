@@ -27,12 +27,7 @@ export function listingCard(listings) {
             })}
             <h3>${listing.title}</h3>
             <p>${listing.description}</p>
-            <a href="/html/updateListing.html?id=${
-              listing.id
-            }">update listing</a>
-            <a href="/html/deleteListing.html?id=${
-              listing.id
-            }"delete listing</a>
+            <a href="/html/updateListing.html?id=${listing.id}">update listing</a>
         </a>
     `;
     });
