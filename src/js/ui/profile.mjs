@@ -15,18 +15,21 @@ export function viewProfile(profile) {
   }
 }
 
-export function listingCard(listing) {
+export function listingCard(listings) {
   const listingContainer = document.getElementById("listingContainer");
   listingContainer.innerHTML = "";
-  if (listing) {
-    listingContainer.innerHTML = `
-        <a href="/html/updateListing.html?id=${listing.id}" id="listingCard">
+  if (listings) {
+    listings.map((listing) => {
+      listingContainer.innerHTML = `
+        <a href="/html/listing.html?id=${listing.id}" id="listingCard">
             ${listing.media.map((img) => {
               return `<img src="${img}" alt=${listing.description}`;
             })}
             <h3>${listing.title}</h3>
             <p>${listing.description}</p>
+            <a href="/html/updateListing.html?id=${listing.id}">update listing</a>
         </a>
     `;
+    });
   }
 }

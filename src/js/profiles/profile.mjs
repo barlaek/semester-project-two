@@ -21,13 +21,10 @@ export async function getProfile() {
   const json = await response.json();
   console.log(json);
   viewProfile(json);
-  const listingsArray = json.listings
-  console.log(listingsArray)
-  const listingsObject = listingsArray.map((object) => {
-    console.log(object)
-    listingCard(object)
-  })
-  //   listingCard(json.listings);
+  const listingsArray = json.listings;
+  console.log(listingsArray);
+
+  listingCard(listingsArray);
 }
 
 getProfile();
