@@ -17,3 +17,13 @@ export function viewProfile(profile) {
     `;
   }
 }
+
+// export function listingCard(listing) {
+//   const listingContainer = document.getElementById("listingContainer");
+//   listingContainer.innerHTML = "";
+//   if (listing) {
+//     listingContainer.innerHTML = `
+//         <div>${listing}</div>
+//     `;
+//   }
+// }

@@ -1,6 +1,7 @@
 import { API_PROFILES } from "../api/apiPaths.mjs";
 import { getSearchParams } from "../api/searchParams.mjs";
 import { headers } from "../auth/headers.mjs";
+import { viewListing } from "../ui/listing.mjs";
 import { viewProfile } from "../ui/profile.mjs";
 
 export async function getProfile() {
@@ -20,6 +21,7 @@ export async function getProfile() {
   const json = await response.json();
   console.log(json);
   viewProfile(json);
+  //   listingCard(json.listings);
 }
 
 getProfile();
