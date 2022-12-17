@@ -4,7 +4,7 @@ export function viewProfile(profile) {
   if (profile) {
     profileContainer.innerHTML = `
     <div id="profileCard">
-        <img src="${profile.avatar} alt="profile avatar">
+        <img src="${profile.avatar}" alt="profile avatar">
         <h2>${profile.name}</h2>
         <p>current credit: ${profile.credits}</p>
     </div>
