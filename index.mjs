@@ -34,5 +34,5 @@ import { header, indexList } from "./src/js/ui/header.mjs";
 // import * as index from "./src/js/listings/index.mjs";
 
 header();
-// indexList();
+indexList();
 // listing()
