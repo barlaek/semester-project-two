@@ -12,4 +12,7 @@ export async function createListing(newListing) {
   console.log(response);
   const json = await response.json();
   console.log(json);
+  if(response.ok) {
+    location.reload()
+  }
 }

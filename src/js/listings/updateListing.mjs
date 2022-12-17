@@ -15,5 +15,8 @@ export async function updateListing(input) {
   const response = await fetch(`${API_LISTINGS}/${id}`, upData);
   console.log(response);
   const json = await response.json();
-  console.log(json)
+  console.log(json);
+  if (response.ok) {
+    location.reload();
+  }
 }

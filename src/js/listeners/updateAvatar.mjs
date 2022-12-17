@@ -21,6 +21,9 @@ async function updateAvatar(mediaURL) {
   console.log(response);
   const json = await response.json();
   console.log(json);
+  if (response.ok) {
+    location.href = `/html/profile.html?name=${name}`;
+  }
 }
 
 const updateForm = document
