@@ -20,13 +20,13 @@ export function listingCard(listing) {
   listingContainer.innerHTML = "";
   if (listing) {
     listingContainer.innerHTML = `
-        <div id="listingCard">
+        <a href="/html/updateListing.html?id=${listing.id}" id="listingCard">
             ${listing.media.map((img) => {
               `<img src="${img}" alt=${listing.description}`;
             })}
             <h3>${listing.title}</h3>
             <p>${listing.description}</p>
-        </div>
+        </a>
     `;
   }
 }
