@@ -1,6 +1,6 @@
 import { loadToken } from "../storage/storage.mjs";
 
-export const update = document
+const update = document
   .getElementById("update")
   .addEventListener("click", (event) => {
     event.preventDefault();
