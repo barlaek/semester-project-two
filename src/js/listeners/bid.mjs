@@ -1,24 +1,28 @@
 import { placeBid } from "../listings/bid.mjs";
 import { getSearchParams } from "../api/searchParams.mjs";
+import { profile } from "../auth/state.mjs";
 
-async function bidBtn(event) {
-  event.preventDefault();
-  const form = event.target;
-  const data = new FormData(form);
-  const body = data.get("body");
-  const listingId = form.dataset.listingId;
-  const bid = getSearchParams().bid;
-  await placeBid(listingId, body, bid);
-  console.log(body, listingId, bid);
-  location.reload();
-}
+// async function bidBtn(event) {
+//   event.preventDefault();
+//   const form = event.target;
+//   const data = new FormData(form);
+//   const body = data.get("body");
+//   const listingId = form.dataset.listingId;
+//   const bid = getSearchParams().bid;
+//   await placeBid(listingId, body, bid);
+//   console.log(body, listingId, bid);
+//   location.reload();
+// }
 
-const bidForm = document
-  .getElementById("bidForm")
-  .addEventListener("submit", (event) => {
-    event.preventDefault();
-    bidBtn();
-  });
+// const bidForm = document
+//   .getElementById("bidForm")
+//   .addEventListener("submit", (event) => {
+//     event.preventDefault();
+//     bidBtn();
+//   });
+
+const credit = profile.credits;
+console.log(credit);
 
 // const queryString = document.location.search;
 // const params = new URLSearchParams(queryString);
