@@ -1,6 +1,6 @@
 import { placeBid } from "../listings/bid.mjs";
 import { getSearchParams } from "../api/searchParams.mjs";
-import { profile } from "../auth/state.mjs";
+import { loadToken } from "../storage/storage.mjs";
 
 // async function bidBtn(event) {
 //   event.preventDefault();
@@ -21,8 +21,8 @@ import { profile } from "../auth/state.mjs";
 //     bidBtn();
 //   });
 
-const credit = profile.credits;
-console.log(credit);
+const profile = loadToken("profile");
+console.log(profile.credits);
 
 // const queryString = document.location.search;
 // const params = new URLSearchParams(queryString);
