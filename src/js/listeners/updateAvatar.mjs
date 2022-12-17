@@ -33,5 +33,4 @@ const updateForm = document
     };
     updateAvatar(media);
     console.log(media);
-    location.href = `/html/profile.html?name=${name}`;
   });
