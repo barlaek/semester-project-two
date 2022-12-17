@@ -2,7 +2,7 @@ import { API_PROFILES } from "../api/apiPaths.mjs";
 import { getSearchParams } from "../api/searchParams.mjs";
 import { headers } from "../auth/headers.mjs";
 import { viewListing } from "../ui/listing.mjs";
-import { viewProfile } from "../ui/profile.mjs";
+import { listingCard, viewProfile } from "../ui/profile.mjs";
 
 export async function getProfile() {
   const getData = {
@@ -21,6 +21,12 @@ export async function getProfile() {
   const json = await response.json();
   console.log(json);
   viewProfile(json);
+  const listingsArray = json.listings
+  console.log(listingsArray)
+  const listingsObject = listingsArray.map((object) => {
+    console.log(object)
+    listingCard(object)
+  })
   //   listingCard(json.listings);
 }
 
