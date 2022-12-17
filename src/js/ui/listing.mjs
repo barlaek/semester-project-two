@@ -27,9 +27,6 @@ export async function viewListing(listing) {
                 <h2>${listing.title}</h2>
                 <p>${listing.description}</p>
                 <h4>current bids:</h4>
-                <ul>
-                    <li>${listing.bids.amount}</li>
-                </ul>
             </div>
         </div>`;
   }
