@@ -24,7 +24,7 @@ export async function getProfile() {
   const listingsArray = json.listings;
   console.log(listingsArray);
 
-  listingCard(listingsArray);
+  listingCard(json.listings);
 }
 
 getProfile();

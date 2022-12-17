@@ -19,7 +19,7 @@ export function listingCard(listings) {
   const listingContainer = document.getElementById("listingContainer");
   listingContainer.innerHTML = "";
   if (listings) {
-    listings.map((listing) => {
+    listings.forEach((listing) => {
       listingContainer.innerHTML = `
         <a href="/html/listing.html?id=${listing.id}" id="listingCard">
             ${listing.media.map((img) => {
@@ -27,7 +27,12 @@ export function listingCard(listings) {
             })}
             <h3>${listing.title}</h3>
             <p>${listing.description}</p>
-            <a href="/html/updateListing.html?id=${listing.id}">update listing</a>
+            <a href="/html/updateListing.html?id=${
+              listing.id
+            }">update listing</a>
+            <a href="/html/deleteListing.html?id=${
+              listing.id
+            }"delete listing</a>
         </a>
     `;
     });
