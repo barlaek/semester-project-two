@@ -5,6 +5,14 @@ import { createListing } from "../listings/createListing.mjs";
 import { viewListings } from "./listings.mjs";
 
 export async function header() {
+  const home = document
+    .getElementById("home")
+    .addEventListener("click", (event) => {
+      event.preventDefault();
+      const profile = loadToken("profile");
+      window.location = `/index.html?name=${profile.name}`;
+    });
+
   const registerBtn = document
     .getElementById("registerBtn")
     .addEventListener("click", (event) => {
