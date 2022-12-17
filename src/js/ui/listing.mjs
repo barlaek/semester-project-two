@@ -31,9 +31,6 @@ export async function viewListing(listing) {
                     <li>${listing.bids.amount}</li>
                 </ul>
             </div>
-            <div>
-                <a href="/html/profile.html?name="${listing.seller.name}">${listing.seller.name}</a>
-            </div>
         </div>`;
   }
 }
