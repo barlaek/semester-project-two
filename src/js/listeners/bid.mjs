@@ -38,7 +38,7 @@ export const bid = document
     };
     placeBid(bid);
     console.log(bid);
-    // window.location.replace(`${url}=${bid}?_seller=true&_bids=true`);
+    location.reload();
   });
 
 // const bidBtn = document

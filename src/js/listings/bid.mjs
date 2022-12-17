@@ -10,7 +10,7 @@ export async function placeBid(bid) {
   const postData = {
     method: "POST",
     headers: headers("application/json"),
-    method: JSON.stringify(bid),
+    body: JSON.stringify(bid),
   };
 
   const response = await fetch(`${url}`, postData);

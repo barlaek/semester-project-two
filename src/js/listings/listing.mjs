@@ -5,7 +5,7 @@ import { viewListing } from "../ui/listing.mjs";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = new URL(`${API_LISTINGS}/${id}?_seller=true&_bids=true`);
+const url = new URL(`${API_LISTINGS}/${id}`);
 // const url = `${API_LISTINGS}/${id}?_seller=true&_bids=true`;
 
 export async function getListing() {
@@ -14,7 +14,7 @@ export async function getListing() {
     headers: headers("application/json"),
     body: JSON.stringify(),
   };
-  const response = await fetch(`${url}`, getData);
+  const response = await fetch(`${url}?_seller=true&_bids=true`, getData);
   const json = await response.json();
   console.log(json);
   viewListing(json);
