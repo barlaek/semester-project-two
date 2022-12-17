@@ -22,7 +22,7 @@ export function listingCard(listing) {
     listingContainer.innerHTML = `
         <a href="/html/updateListing.html?id=${listing.id}" id="listingCard">
             ${listing.media.map((img) => {
-              `<img src="${img}" alt=${listing.description}`;
+              return `<img src="${img}" alt=${listing.description}`;
             })}
             <h3>${listing.title}</h3>
             <p>${listing.description}</p>
