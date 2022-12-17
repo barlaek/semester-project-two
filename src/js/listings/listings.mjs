@@ -8,7 +8,7 @@ export async function getListings() {
     headers: headers("application/json"),
     body: JSON.stringify(),
   };
-  const response = await fetch(`${API_LISTINGS}`, getData);
+  const response = await fetch(`${API_LISTINGS}?_active=true`, getData);
   console.log(response);
   const listings = await response.json();
   console.log(listings);
@@ -57,5 +57,3 @@ function filterByPopularity(listings) {
 }
 
 // getListings();
-
-
