@@ -1,59 +1,26 @@
 import { API_LISTINGS } from "../api/apiPaths.mjs";
 import { headers } from "../auth/headers.mjs";
 import { viewListings } from "../ui/listings.mjs";
+import { search } from "./search.mjs";
+import { filterByPopularity, filterByRecently } from "./filter.mjs";
 
 export async function getListings() {
-  const getData = {
-    method: "GET",
-    headers: headers("application/json"),
-    body: JSON.stringify(),
-  };
-  const response = await fetch(`${API_LISTINGS}?_active=true`, getData);
-  console.log(response);
-  const listings = await response.json();
-  console.log(listings);
-  viewListings(listings);
-  search(listings);
-  filterByRecently(listings);
-  filterByPopularity(listings);
-}
+  try {
+    const getData = {
+      method: "GET",
+      headers: headers("application/json"),
+      body: JSON.stringify(),
+    };
+    const response = await fetch(`${API_LISTINGS}?_active=true`, getData);
+    if (response.ok) {
+      const listings = await response.json();
+      viewListings(listings);
+      search(listings);
+      filterByRecently(listings);
+      filterByPopularity(listings);
+    }
+  } catch(error) {
+    console.log(error)
+  }
 
-function search(listings) {
-  const search = document.getElementById("search");
-  search.onkeyup = function (event) {
-    const searchString = event.target.value.trim().toLowerCase();
-    const filteredListings = listings.filter((listing) => {
-      if (
-        listing.title.toLowerCase().includes(searchString) ||
-        listing.tags.toString().toLowerCase().includes(searchString)
-      ) {
-        return true;
-      }
-    });
-    console.log(filteredListings);
-    viewListings(filteredListings);
-  };
 }
-
-function filterByRecently(listings) {
-  const filterBtn = document.getElementById("filterRecent");
-  filterBtn.onclick = function () {
-    const recently = new Date(
-      new Date().setDate(new Date().getDate() - 2)
-    ).toISOString();
-    const filtered = listings.filter((listing) => listing.created >= recently);
-    console.log(filtered);
-    viewListings(filtered);
-  };
-}
-
-function filterByPopularity(listings) {
-  const filterBtn = document.getElementById("filterPopular");
-  filterBtn.onclick = function () {
-    const filtered = listings.filter((listing) => listing._count.bids >= 10);
-    console.log(filtered);
-    viewListings(filtered);
-  };
-}
-
-// getListings();
