@@ -11,6 +11,5 @@ export const updateListingForm = document
       tags: Array.of(form.listingTag.value),
       media: Array.of(form.newMedia.value.toString()),
     };
-    console.log(upDatedListing);
     updateListing(upDatedListing);
   });
