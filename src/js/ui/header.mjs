@@ -50,37 +50,6 @@ export async function header() {
       logoutUser();
       location.href = "/";
     });
-
-  // const listingForm = document
-  //   .getElementById("newListingContainer")
-  //   .addEventListener("submit", (event) => {
-  //     event.preventDefault();
-  //     const form = event.target;
-  //     const newListing = {
-  //       title: form.title.value,
-  //       description: form.description.value,
-  //       tags: form.tags.value,
-  //       media: form.newMedia.value,
-  //       endsAt: new Date(""),
-  //     };
-  //     console.log(newListing);
-  //     createListing(newListing);
-  //   });
-
-  // getListings();
-
-  // let listings = [];
-
-  // const search = document
-  //   .getElementById("search")
-  //   .addEventListener("keyup", (event) => {
-  //     const searchString = event.target.value.toLowerCase();
-  //     const filteredListings = listings.filter((listing) => {
-  //       return (listing.title.toString().toLowerCase().includes(searchString));
-  //     });
-  //     console.log(filteredListings);
-  //     viewListings(filteredListings);
-  //   });
 }
 
 export async function indexList() {
