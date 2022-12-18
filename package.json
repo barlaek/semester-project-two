@@ -10,7 +10,7 @@
     "test-e2e": "cypress open",
     "test-e2e-cli": "cypress run",
     "dev": "vite",
-    "vite-build": "vite build *.html",
+    "vite-build": "vite build src/html:dist/html",
     "vite-preview": "vite preview",
     "format": "prettier -w src/**/*.mjs",
     "lint": "eslint src/**/*.mjs",
