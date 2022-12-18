@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page | Auctioneer</title>
+    <link rel="stylesheet" src="./src/styles/styles.css" />
+    <script type="module" crossorigin src="/assets/index.5a560ab4.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button type="button" id="home">home</button>
+        <button type="button" id="registerBtn">register</button>
+        <button type="button" id="loginBtn">login</button>
+        <button type="button" id="createBtn">create new listing</button>
+        <button type="button" id="profile">profile</button>
+        <button type="button" id="logoutBtn">logout</button>
+      </nav>
+    </header>
+
+    <main>
+      <form id="searchbar">
+        <label for="searchbar" name="search">
+          <input id="search" type="search" placeholder="Search" />
+        </label>
+      </form>
+      <div id="filter">
+        <button type="button" id="filterRecent">most recent</button>
+        <button type="button" id="filterPopular">most popular</button>
+      </div>
+
+      <div id="listingsContainer"></div>
+    </main>
+
+    <footer>
+      <p>Copyright &copy;</p>
+    </footer>
+  </body>
+</html>

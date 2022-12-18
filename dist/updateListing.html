@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>update listing | Auctioneer</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button type="button" id="home">home</button>
+        <button type="button" id="registerBtn">register</button>
+        <button type="button" id="loginBtn">login</button>
+        <button type="button" id="createBtn">create new listing</button>
+        <button type="button" id="profile">profile</button>
+        <button type="button" id="logoutBtn">Logout</button>
+      </nav>
+    </header>
+
+    <main>
+      <div id="updateContainer">
+        <form id="updateListingForm">
+          <input type="title" name="title" id="newTitle" placeholder="title" />
+          <input
+            type="description"
+            name="description"
+            id="newDescription"
+            placeholder="description"
+          />
+          <input type="tags" name="tags" id="listingTag" placeholder="tags" />
+          <input type="media" name="media" id="newMedia" placeholder="media" />
+          <button type="submit">update listing</button>
+        </form>
+        <form id="delete">
+          <button type="submit" id="deleteBtn">delete listing</button>
+        </form>
+      </div>
+      <a href="/index.html">Back to the future</a>
+    </main>
+    <script src="index.mjs" type="module"></script>
+    <script src="/src/js/listeners/updateListing.mjs" type="module"></script>
+    <script src="/src/js/listings/updateListing.mjs" type="module"></script>
+    <script src="/src/js/listeners/delete.mjs" type="module"></script>
+  </body>
+</html>
