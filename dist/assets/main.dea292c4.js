@@ -1,4 +1,4 @@
-import{h as a,A as l}from"./headers.40e17284.js";const c=document.getElementById("listingsContainer");function i(e){c.innerHTML="",e&&e.forEach(t=>c.innerHTML+=`<a href="/src/html/listing/listing.html?id=${t.id}">
+import{h as a,A as l}from"./headers.e04ea350.js";const c=document.getElementById("listingsContainer");function i(e){c.innerHTML="",e&&e.forEach(t=>c.innerHTML+=`<a href="/src/html/listing/listing.html?id=${t.id}">
         <img src="${t.media}"/>
         <p>${t.title}</p>
         <p>Ends at ${t.endsAt}</p>
