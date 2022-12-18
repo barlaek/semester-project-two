@@ -2,7 +2,7 @@
 
 Auction site
 
-This project is an incomplete version of an auction website. Although the project works fully on localhost, the deployed site finds itself lacking.
+This project is an incomplete version of an auction website.
 
 ## Testing badges
 
