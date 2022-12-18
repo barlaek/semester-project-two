@@ -1,6 +1,6 @@
 import { loadToken } from "../storage/storage.mjs";
 import { logoutUser } from "../auth/logout.mjs";
-import { getListings } from "../listings/listings.mjs";
+// import { getListings } from "../listings/listings.mjs";
 
 export async function header() {
   const home = document
@@ -50,6 +50,6 @@ export async function header() {
     });
 }
 
-export async function indexList() {
-  getListings();
-}
+// export async function indexList() {
+//   getListings();
+// }

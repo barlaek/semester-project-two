@@ -25,3 +25,6 @@ export async function getListings() {
     console.log(error);
   }
 }
+
+getListings();
+
