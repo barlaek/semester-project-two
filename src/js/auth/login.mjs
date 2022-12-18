@@ -18,6 +18,8 @@ export async function loginUser(user) {
       saveToken("profile", profile);
       window.location = `/index.html?name=${profile.name}`;
       return;
+    } else {
+      alert("please fill in: valid username and valid password");
     }
   } catch (error) {
     console.log(error);

@@ -18,9 +18,10 @@ export async function getListings() {
       search(listings);
       filterByRecently(listings);
       filterByPopularity(listings);
+    } else {
+      alert("oops! something went wrong!");
     }
-  } catch(error) {
-    console.log(error)
+  } catch (error) {
+    console.log(error);
   }
-
 }

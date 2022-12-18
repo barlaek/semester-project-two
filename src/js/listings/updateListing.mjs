@@ -16,6 +16,10 @@ export async function updateListing(input) {
     const response = await fetch(`${API_LISTINGS}/${id}`, upData);
     if (response.ok) {
       location.reload();
+    } else {
+      alert(
+        "oops! something went wrong. please fill in the correct details. media must be a valid url"
+      );
     }
   } catch (error) {
     console.log(error);

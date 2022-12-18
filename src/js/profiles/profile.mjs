@@ -21,6 +21,8 @@ export async function getProfile() {
       const json = await response.json();
       viewProfile(json);
       listingCard(json.listings);
+    } else {
+      alert("please log in");
     }
   } catch (error) {
     console.log(error);

@@ -17,6 +17,8 @@ export async function placeBid(bid) {
     const response = await fetch(`${url}`, postData);
     if (response.ok) {
       location.reload();
+    } else {
+      alert("oops! something went wrong");
     }
   } catch (error) {
     console.log(error);

@@ -7,6 +7,7 @@ export const newUser = document
     const form = event.target;
     const newUser = {
       name: form.registerName.value,
+      avatar: form.newAvatar.value,
       email: form.registerEmail.value,
       password: form.registerPassword.value,
     };

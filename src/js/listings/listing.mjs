@@ -18,6 +18,8 @@ export async function getListing() {
     const json = await response.json();
     if (response.ok) {
       viewListing(json);
+    } else {
+      alert("oops! something went wrong!");
     }
   } catch (error) {
     console.log(error);
