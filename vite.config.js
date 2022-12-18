@@ -6,13 +6,19 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        nested: resolve(__dirname, "src/html/createListing.html"),
-        nested: resolve(__dirname, "src/html/listing.html"),
-        nested: resolve(__dirname, "src/html/login.html"),
-        nested: resolve(__dirname, "src/html/profile.html"),
-        nested: resolve(__dirname, "src/html/register.html"),
-        nested: resolve(__dirname, "src/html/updateAvatar.html"),
-        nested: resolve(__dirname, "src/html/updateListing.html"),
+        create: resolve(__dirname, "src/html/createListing/createListing.html"),
+        listing: resolve(__dirname, "src/html/listing/listing.html"),
+        login: resolve(__dirname, "src/html/login/login.html"),
+        profile: resolve(__dirname, "src/html/profile/profile.html"),
+        register: resolve(__dirname, "src/html/register/register.html"),
+        updateAvatar: resolve(
+          __dirname,
+          "src/html/updateAvatar/updateAvatar.html"
+        ),
+        updateListing: resolve(
+          __dirname,
+          "src/html/updateListing/updateListing.html"
+        ),
       },
     },
   },
