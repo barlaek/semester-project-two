@@ -1,4 +1,4 @@
-export async function viewListing(listing) {
+export function viewListing(listing) {
   const listingContainer = document.getElementById("listingContainer");
   listingContainer.innerHTML = "";
   if (listing) {

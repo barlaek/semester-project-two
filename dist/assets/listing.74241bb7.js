@@ -1,4 +1,4 @@
-import{A as o,h as s}from"./index.678792ff.js";async function r(e){const t=document.getElementById("listingContainer");t.innerHTML="",e&&(t.innerHTML=`<div>
+import{A as o,h as s}from"./index.678792ff.js";function r(e){const t=document.getElementById("listingContainer");t.innerHTML="",e&&(t.innerHTML=`<div>
             <img src="${e.media}" alt="${e.description}">
             <div>
                 <h2>${e.title}</h2>
