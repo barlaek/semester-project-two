@@ -16,7 +16,6 @@ export async function getListing() {
     };
     const response = await fetch(`${url}?_seller=true&_bids=true`, getData);
     const json = await response.json();
-    console.log(json)
     if (response.ok) {
       viewListing(json);
     }
