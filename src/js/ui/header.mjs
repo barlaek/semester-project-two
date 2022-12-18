@@ -15,14 +15,14 @@ export async function header() {
     .getElementById("registerBtn")
     .addEventListener("click", (event) => {
       event.preventDefault();
-      window.location = `/html/register.html`;
+      window.location = `/register.html`;
     });
 
   const loginBtn = document
     .getElementById("loginBtn")
     .addEventListener("click", (event) => {
       event.preventDefault();
-      window.location = `/html/login.html`;
+      window.location = `/login.html`;
     });
 
   const createListing = document
@@ -30,7 +30,7 @@ export async function header() {
     .addEventListener("click", (event) => {
       event.preventDefault();
       const profile = loadToken("profile");
-      window.location = `/html/createListing.html?name=${profile.name}`;
+      window.location = `/createListing.html?name=${profile.name}`;
     });
 
   const profile = document
@@ -38,7 +38,7 @@ export async function header() {
     .addEventListener("click", (event) => {
       event.preventDefault();
       const profile = loadToken("profile");
-      window.location = `/html/profile.html?name=${profile.name}`;
+      window.location = `/profile.html?name=${profile.name}`;
     });
 
   const logout = document

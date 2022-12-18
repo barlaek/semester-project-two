@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration form | Auctioneer</title>
-    <link rel="stylesheet" src="/src/styles/styles.css" />
+    <title>Create new listing | Auctioneer</title>
   </head>
   <body>
     <header>
@@ -20,41 +19,48 @@
     </header>
 
     <main>
-      <div id="registrationContainer">
-        <form id="registrationForm">
+      <div id="newContainer">
+        <form id="newListingForm">
           <input
             required
-            type="name"
-            name="name"
-            id="registerName"
-            placeholder="full name"
+            type="title"
+            name="title"
+            id="newTitle"
+            placeholder="title"
           />
           <input
-            type="text"
-            id="newAvatar"
-            name="new avatar"
-            placeholder="avatar"
-          />
-          <input
-            required
-            type="email"
-            name="email"
-            id="registerEmail"
-            placeholder="email: example@noroff.no"
+            type="description"
+            name="description"
+            id="newDescription"
+            placeholder="description"
           />
           <input
             required
-            type="password"
-            name="password"
-            id="registerPassword"
-            placeholder="password"
+            type="tags"
+            name="tags"
+            id="listingTag"
+            placeholder="tags"
           />
-          <button type="submit">Register</button>
+          <input
+            required
+            type="media"
+            name="media"
+            id="newMedia"
+            placeholder="media"
+          />
+          <input
+            required
+            type="date"
+            name="endsAt"
+            id="endsAt"
+            placeholder="ends at"
+          />
+          <button type="submit">Create new listing</button>
         </form>
       </div>
       <a href="/index.html">Back to the future</a>
     </main>
-    <script src="/index.mjs" type="module"></script>
-    <script src="/src/js/listeners/register.mjs" type="module"></script>
+    <script src="index.mjs" type="module"></script>
+    <script src="/src/js/listeners/createListing.mjs" type="module"></script>
   </body>
 </html>

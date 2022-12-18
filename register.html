@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Auctioneer</title>
+    <title>Registration form | Auctioneer</title>
     <link rel="stylesheet" src="/src/styles/styles.css" />
   </head>
   <body>
@@ -20,29 +20,41 @@
     </header>
 
     <main>
-      <div id="loginContainer">
-        <form id="loginForm">
+      <div id="registrationContainer">
+        <form id="registrationForm">
+          <input
+            required
+            type="name"
+            name="name"
+            id="registerName"
+            placeholder="full name"
+          />
+          <input
+            type="text"
+            id="newAvatar"
+            name="new avatar"
+            placeholder="avatar"
+          />
           <input
             required
             type="email"
             name="email"
-            id="loginEmail"
-            placeholder="email"
+            id="registerEmail"
+            placeholder="email: example@noroff.no"
           />
           <input
             required
             type="password"
             name="password"
-            id="loginPassword"
+            id="registerPassword"
             placeholder="password"
           />
-          <button type="submit">Login</button>
+          <button type="submit">Register</button>
         </form>
       </div>
-
       <a href="/index.html">Back to the future</a>
     </main>
-    <script src="/index.mjs" type="module"></script>
-    <script src="/src/js/listeners/login.mjs" type="module"></script>
+    <script src="index.mjs" type="module"></script>
+    <script src="/src/js/listeners/register.mjs" type="module"></script>
   </body>
 </html>
