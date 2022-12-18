@@ -6,5 +6,5 @@ const update = document
     event.preventDefault();
     const profile = loadToken("profile");
     const id = profile.name;
-    location.href = `/updateAvatar.html?name=${id}`;
+    location.href = `/src/html/updateAvatar.html?name=${id}`;
   });

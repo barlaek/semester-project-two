@@ -16,7 +16,7 @@
     "lint": "eslint src/**/*.mjs",
     "lint-fix": "eslint src/**/*.mjs --cache --fix",
     "prepare": "husky install",
-    "build": "vite build src/**/*.html"
+    "build": "vite build src/html"
   },
   "repository": {
     "type": "git",

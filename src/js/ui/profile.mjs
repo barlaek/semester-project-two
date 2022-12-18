@@ -21,7 +21,7 @@ export function listingCard(listings) {
   if (listings) {
     listings.forEach((listing) => {
       listingContainer.innerHTML += `
-        <a href="/listing.html?id=${listing.id}" id="listingCard">
+        <a href="/src/html/listing.html?id=${listing.id}" id="listingCard">
             ${listing.media.map((img) => {
               return `<img src="${img}" alt=${listing.description}`;
             })}
