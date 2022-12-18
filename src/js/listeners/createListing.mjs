@@ -13,6 +13,5 @@ export const listingForm = document
       media: Array.of(form.newMedia.value.toString()),
       endsAt: new Date(form.endsAt.value).toString(),
     };
-    console.log(newListing);
     createListing(newListing);
   });

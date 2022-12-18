@@ -11,7 +11,4 @@ export const form = document
       password: form.loginPassword.value,
     };
     loginUser(user);
-    const profile = loadToken("profile");
-    console.log(profile);
-    window.location = `/index.html?name=${profile.name}`;
   });
