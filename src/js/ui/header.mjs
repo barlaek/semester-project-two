@@ -1,8 +1,6 @@
 import { loadToken } from "../storage/storage.mjs";
 import { logoutUser } from "../auth/logout.mjs";
 import { getListings } from "../listings/listings.mjs";
-import { createListing } from "../listings/createListing.mjs";
-import { viewListings } from "./listings.mjs";
 
 export async function header() {
   const home = document

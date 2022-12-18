@@ -1,5 +1,4 @@
 import { createListing } from "../listings/createListing.mjs";
-// import { loadToken } from "../storage/storage.mjs";
 
 export const listingForm = document
   .getElementById("newListingForm")

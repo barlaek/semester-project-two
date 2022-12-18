@@ -12,9 +12,9 @@
     "dev": "vite",
     "vite-build": "vite build",
     "vite-preview": "vite preview",
-    "format": "prettier -w src/**/*.js",
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "format": "prettier -w src/**/*.mjs",
+    "lint": "eslint src/**/*.mjs",
+    "lint-fix": "eslint src/**/*.mjs --cache --fix",
     "prepare": "husky install"
   },
   "repository": {
@@ -49,7 +49,7 @@
     "vite": "^3.2.4"
   },
   "lint-staged": {
-    "*.js": [
+    "*.mjs": [
       "eslint --fix",
       "prettier --write"
     ],

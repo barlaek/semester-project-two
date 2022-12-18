@@ -1,5 +1,4 @@
 import { loginUser } from "../auth/login.mjs";
-import { loadToken } from "../storage/storage.mjs";
 
 export const form = document
   .getElementById("loginForm")
