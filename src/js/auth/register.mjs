@@ -1,6 +1,12 @@
 import { API_REGISTER } from "../api/apiPaths.mjs";
 import { headers } from "./headers.mjs";
 
+/**
+ * registration function that takes an
+ * @param {*object} user
+ * and POSTs it to the API
+ */
+
 export async function registerUser(user) {
   try {
     const postData = {

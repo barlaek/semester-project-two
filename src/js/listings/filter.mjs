@@ -1,5 +1,11 @@
 import { viewListings } from "../ui/listings.mjs";
 
+/**
+ * takes a listing
+ * @param {object} listings
+ * and filters listings based on recency
+ */
+
 export function filterByRecently(listings) {
   const filterBtn = document.getElementById("filterRecent");
   filterBtn.onclick = function () {
@@ -11,6 +17,12 @@ export function filterByRecently(listings) {
     viewListings(filtered);
   };
 }
+
+/**
+ * takes a listing
+ * @param {object} listings
+ * and filters for bid counts
+ */
 
 export function filterByPopularity(listings) {
   const filterBtn = document.getElementById("filterPopular");

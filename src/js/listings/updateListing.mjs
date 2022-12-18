@@ -5,6 +5,12 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
+/**
+ * an updating function that takes a
+ * @param {object} input 
+ * and PUTs data on the object to the objects corresponding ID
+ */
+
 export async function updateListing(input) {
   try {
     const upData = {

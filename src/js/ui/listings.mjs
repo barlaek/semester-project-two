@@ -1,5 +1,11 @@
 export const listingsContainer = document.getElementById("listingsContainer");
 
+/**
+ * function that takes an
+ * @param {array} listings
+ * and renders the data into HTML
+ */
+
 export function viewListings(listings) {
   listingsContainer.innerHTML = "";
   if (listings) {

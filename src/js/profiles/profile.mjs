@@ -3,6 +3,11 @@ import { getSearchParams } from "../api/searchParams.mjs";
 import { headers } from "../auth/headers.mjs";
 import { listingCard, viewProfile } from "../ui/profile.mjs";
 
+/**
+ * Function that sends a GET request and
+ * returns a profile object
+ */
+
 export async function getProfile() {
   try {
     const getData = {

@@ -7,6 +7,12 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = `${API_LISTINGS}/${id}`;
 
+/**
+ * takes a
+ * @param {string} id
+ * argument and DELETEs a listing from the API
+ */
+
 export async function deleteListing(id) {
   try {
     const deleteData = {

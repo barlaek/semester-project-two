@@ -1,3 +1,10 @@
+/**
+ * takes an
+ * @param {object} profile
+ * and returns an html rendered object
+ * based on the profile
+ */
+
 export function viewProfile(profile) {
   const profileContainer = document.getElementById("profileContainer");
   profileContainer.innerHTML = "";
@@ -14,6 +21,12 @@ export function viewProfile(profile) {
     `;
   }
 }
+
+/**
+ * takes an
+ * @param {array} listings
+ * of objects and renders the objects into html
+ */
 
 export function listingCard(listings) {
   const listingContainer = document.getElementById("listingContainer");

@@ -2,6 +2,12 @@ import { API_LOGIN } from "../api/apiPaths.mjs";
 import { headers } from "./headers.mjs";
 import { saveToken } from "../storage/index.mjs";
 
+/**
+ * login function that takes an
+ * @param {*object} user
+ * @returns returns a user object and an accessToken
+ */
+
 export async function loginUser(user) {
   try {
     const postData = {

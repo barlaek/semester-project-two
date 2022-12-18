@@ -1,5 +1,11 @@
 import { viewListings } from "../ui/listings.mjs";
 
+/**
+ * search function that takes a
+ * @param {string} listings
+ * and returns an array of objects with similar string values
+ */
+
 export function search(listings) {
   const search = document.getElementById("search");
   search.onkeyup = function (event) {

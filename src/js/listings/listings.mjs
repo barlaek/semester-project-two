@@ -4,6 +4,10 @@ import { viewListings } from "../ui/listings.mjs";
 import { search } from "./search.mjs";
 import { filterByPopularity, filterByRecently } from "./filter.mjs";
 
+/**
+ * Sends a GET request and returns an array of objects
+ */
+
 export async function getListings() {
   try {
     const getData = {
@@ -27,4 +31,3 @@ export async function getListings() {
 }
 
 getListings();
-

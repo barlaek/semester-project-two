@@ -1,6 +1,12 @@
 import { API_LISTINGS } from "../api/apiPaths.mjs";
 import { headers } from "../auth/headers.mjs";
 
+/**
+ * creates a new listing
+ * @param {object} newListing
+ * and POSTs it on the API
+ */
+
 export async function createListing(newListing) {
   try {
     const postData = {

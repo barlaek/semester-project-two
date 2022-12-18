@@ -7,6 +7,12 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = new URL(`${API_LISTINGS}/${id}`);
 
+/**
+ * Fetches an
+ * @param {*object}
+ * from the API based on the ID of the object
+ */
+
 export async function getListing() {
   try {
     const getData = {

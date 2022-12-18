@@ -5,6 +5,12 @@ import { loadToken } from "../storage/storage.mjs";
 const profile = loadToken("profile");
 const name = profile.name;
 
+/**
+ * update function that takes a
+ * @param {*string} mediaURL
+ * and PUTs an update to the profile object on the API
+ */
+
 async function updateAvatar(mediaURL) {
   try {
     const putData = {

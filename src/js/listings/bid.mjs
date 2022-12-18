@@ -6,6 +6,12 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = `${API_LISTINGS}/${id}/bids`;
 
+/**
+ * bidding function that takes a
+ * @param {number} bid
+ * and POSTs it to the API
+ */
+
 export async function placeBid(bid) {
   try {
     const postData = {

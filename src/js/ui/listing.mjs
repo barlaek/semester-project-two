@@ -1,3 +1,9 @@
+/**
+ * function that renders content based on the
+ * @param {object} listing
+ * and returns HTML
+ */
+
 export function viewListing(listing) {
   const listingContainer = document.getElementById("listingContainer");
   listingContainer.innerHTML = "";

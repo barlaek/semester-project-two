@@ -1,6 +1,5 @@
 import { loadToken } from "../storage/storage.mjs";
 import { logoutUser } from "../auth/logout.mjs";
-// import { getListings } from "../listings/listings.mjs";
 
 export async function header() {
   const home = document
@@ -49,7 +48,3 @@ export async function header() {
       location.href = "/";
     });
 }
-
-// export async function indexList() {
-//   getListings();
-// }
