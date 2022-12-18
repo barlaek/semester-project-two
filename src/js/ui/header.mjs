@@ -8,21 +8,21 @@ export async function header() {
     .addEventListener("click", (event) => {
       event.preventDefault();
       const profile = loadToken("profile");
-      window.location = `semester-project-two/index.html?name=${profile.name}`;
+      window.location = `/index.html?name=${profile.name}`;
     });
 
   const registerBtn = document
     .getElementById("registerBtn")
     .addEventListener("click", (event) => {
       event.preventDefault();
-      window.location = `semester-project-two/src/html/register/register.html`;
+      window.location = `/src/html/register/register.html`;
     });
 
   const loginBtn = document
     .getElementById("loginBtn")
     .addEventListener("click", (event) => {
       event.preventDefault();
-      window.location = `semester-project-two/src/html/login/login.html`;
+      window.location = `/src/html/login/login.html`;
     });
 
   const createListing = document
@@ -30,7 +30,7 @@ export async function header() {
     .addEventListener("click", (event) => {
       event.preventDefault();
       const profile = loadToken("profile");
-      window.location = `semester-project-two/src/html/createListing/createListing.html?name=${profile.name}`;
+      window.location = `/src/html/createListing/createListing.html?name=${profile.name}`;
     });
 
   const profile = document
@@ -38,7 +38,7 @@ export async function header() {
     .addEventListener("click", (event) => {
       event.preventDefault();
       const profile = loadToken("profile");
-      window.location = `semester-project-two/src/html/profile/profile.html?name=${profile.name}`;
+      window.location = `/src/html/profile/profile.html?name=${profile.name}`;
     });
 
   const logout = document
