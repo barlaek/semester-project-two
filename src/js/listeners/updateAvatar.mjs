@@ -2,27 +2,23 @@ import { API_PROFILES } from "../api/apiPaths.mjs";
 import { headers } from "../auth/headers.mjs";
 import { loadToken } from "../storage/storage.mjs";
 
-// const queryString = document.location.search;
-// const params = new URLSearchParams(queryString);
-// const name = params.get("name");
-// const url = `${API_PROFILES}/${name}/media`;
-
 const profile = loadToken("profile");
 const name = profile.name;
 
 async function updateAvatar(mediaURL) {
-  const putData = {
-    method: "PUT",
-    headers: headers("application/json"),
-    body: JSON.stringify(mediaURL),
-  };
+  try {
+    const putData = {
+      method: "PUT",
+      headers: headers("application/json"),
+      body: JSON.stringify(mediaURL),
+    };
 
-  const response = await fetch(`${API_PROFILES}/${name}/media`, putData);
-  console.log(response);
-  const json = await response.json();
-  console.log(json);
-  if (response.ok) {
-    location.href = `/html/profile.html?name=${name}`;
+    const response = await fetch(`${API_PROFILES}/${name}/media`, putData);
+    if (response.ok) {
+      location.href = `/html/profile.html?name=${name}`;
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 
@@ -35,5 +31,4 @@ const updateForm = document
       avatar: form.updateURL.value,
     };
     updateAvatar(media);
-    console.log(media);
   });
