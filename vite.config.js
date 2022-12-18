@@ -1,6 +1,14 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 
+// export default {
+//   server: {
+//     port: 5173,
+//     hot: true,
+//     host: "127.0.0.1",
+//   },
+// };
+
 export default defineConfig({
   build: {
     rollupOptions: {
@@ -23,11 +31,3 @@ export default defineConfig({
     },
   },
 });
-
-// export default {
-//   server: {
-//     port: 5173,
-//     hot: true,
-//     host: "127.0.0.1",
-//   },
-// };
