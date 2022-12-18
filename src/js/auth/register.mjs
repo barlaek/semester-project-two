@@ -12,6 +12,10 @@ export async function registerUser(user) {
     const response = await fetch(`${API_REGISTER}`, postData);
     if (response.ok) {
       window.location = `/html/login.html`;
+    } else {
+      alert(
+        "oops! something went wrong. this user might already exist or please provide a valid email address ending in @noroff.no or @stud.noroff.no"
+      );
     }
   } catch (error) {
     console.log(error);
