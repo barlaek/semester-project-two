@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile | Auctioneer</title>
+    <title>Listed product | Auctioneer</title>
   </head>
   <body>
     <header>
@@ -17,13 +17,26 @@
         <button type="button" id="logoutBtn">Logout</button>
       </nav>
     </header>
+
     <main>
-      <div id="profileContainer"></div>
-      <button type="button" id="update">update profile</button>
-      <div id="listingContainer"></div>
+      <div>
+        <div id="listingContainer"></div>
+
+        <form id="bidForm">
+          <input
+            required
+            type="bid"
+            name="bid"
+            id="placeBid"
+            placeholder="place bid"
+          />
+          <button type="submit" id="bid">bid</button>
+        </form>
+      </div>
+      <a href="/index.html">Back to the future</a>
     </main>
-    <script src="/index.mjs" type="module"></script>
-    <script src="/src/js/profiles/profile.mjs" type="module"></script>
-    <script src="/src/js/listeners/profile.mjs" type="module"></script>
+    <script src="index.mjs" type="module"></script>
+    <script src="/src/js/listings/listing.mjs" type="module"></script>
+    <script src="/src/js/listeners/bid.mjs" type="module"></script>
   </body>
 </html>

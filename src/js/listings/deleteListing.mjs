@@ -18,7 +18,7 @@ export async function deleteListing(id) {
     const response = await fetch(`${url}`, deleteData);
     const profile = loadToken("profile");
     if (response) {
-      location.href = `/html/profile.html?name=${profile.name}`;
+      location.href = `/profile.html?name=${profile.name}`;
     }
   } catch (error) {
     console.log(error);
