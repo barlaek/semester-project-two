@@ -15,7 +15,7 @@ async function updateAvatar(mediaURL) {
 
     const response = await fetch(`${API_PROFILES}/${name}/media`, putData);
     if (response.ok) {
-      location.href = `/src/html/profile.html?name=${name}`;
+      location.href = `/src/html/profile/profile.html?name=${name}`;
     }
   } catch (error) {
     console.log(error);
