@@ -20,7 +20,7 @@ export function listingCard(listings) {
   listingContainer.innerHTML = "";
   if (listings) {
     listings.forEach((listing) => {
-      listingContainer.innerHTML = `
+      listingContainer.innerHTML += `
         <a href="/html/listing.html?id=${listing.id}" id="listingCard">
             ${listing.media.map((img) => {
               return `<img src="${img}" alt=${listing.description}`;
