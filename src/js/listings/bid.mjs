@@ -7,14 +7,18 @@ const id = params.get("id");
 const url = `${API_LISTINGS}/${id}/bids`;
 
 export async function placeBid(bid) {
-  const postData = {
-    method: "POST",
-    headers: headers("application/json"),
-    body: JSON.stringify(bid),
-  };
+  try {
+    const postData = {
+      method: "POST",
+      headers: headers("application/json"),
+      body: JSON.stringify(bid),
+    };
 
-  const response = await fetch(`${url}`, postData);
-  console.log(response);
-  const json = await response.json();
-  console.log(json);
+    const response = await fetch(`${url}`, postData);
+    if (response.ok) {
+      location.reload();
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }

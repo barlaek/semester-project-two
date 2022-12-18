@@ -9,6 +9,4 @@ export const bid = document
       amount: parseInt(form.placeBid.value),
     };
     placeBid(bid);
-    console.log(bid);
-    location.reload();
   });
