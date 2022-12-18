@@ -1,4 +1,4 @@
-import{h as a,b as r,l as o}from"./index.a0e36f68.js";const s=()=>{const e=new URL(window.location);return Object.fromEntries(e.searchParams)};function d(e){const n=document.getElementById("profileContainer");n.innerHTML="",e&&(n.innerHTML=`
+import{h as a,b as r,l as o}from"./index.fa20b7ac.js";const s=()=>{const e=new URL(window.location);return Object.fromEntries(e.searchParams)};function d(e){const n=document.getElementById("profileContainer");n.innerHTML="",e&&(n.innerHTML=`
     <div id="profileCard">
         <img src="${e.avatar}" alt="profile avatar">
         <h2>${e.name}</h2>
