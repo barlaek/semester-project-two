@@ -45,16 +45,18 @@ import { headers } from "./headers.mjs";
 // console.log(registeredUser);
 
 export async function registerUser(user) {
-  const postData = {
-    method: "POST",
-    headers: headers("application/json"),
-    body: JSON.stringify(user),
-  };
+  try {
+    const postData = {
+      method: "POST",
+      headers: headers("application/json"),
+      body: JSON.stringify(user),
+    };
 
-  const response = await fetch(`${API_REGISTER}`, postData);
-  console.log(response);
-  const json = await response.json();
-  console.log(json);
+    const response = await fetch(`${API_REGISTER}`, postData);
+    if (response.ok) {
+      window.location = `/html/login.html`;
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
-
-// registerUser(registeredUser);

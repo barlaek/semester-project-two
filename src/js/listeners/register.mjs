@@ -11,11 +11,4 @@ export const newUser = document
       password: form.registerPassword.value,
     };
     registerUser(newUser);
-    console.log(newUser);
-    // const data = new FormData(form);
-    // const name = data.get("name");
-    // const email = data.get("email");
-    // const password = data.get("password");
-    // registerUser(name, email, password);
-    window.location = `/html/login.html`;
   });
