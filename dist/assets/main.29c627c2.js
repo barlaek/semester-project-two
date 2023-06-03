@@ -1,5 +1,0 @@
-import{h as a,A as l}from"./headers.e04ea350.js";const c=document.getElementById("listingsContainer");function i(e){c.innerHTML="",e&&e.forEach(t=>c.innerHTML+=`<a href="/src/html/listing/listing.html?id=${t.id}">
-        <img src="${t.media}"/>
-        <p>${t.title}</p>
-        <p>Ends at ${t.endsAt}</p>
-        </a>`)}function f(e){const t=document.getElementById("search");t.onkeyup=function(n){const o=n.target.value.trim().toLowerCase(),r=e.filter(s=>{if(s.title.toLowerCase().includes(o)||s.tags.toString().toLowerCase().includes(o))return!0});i(r)}}function u(e){const t=document.getElementById("filterRecent");t.onclick=function(){const n=new Date(new Date().setDate(new Date().getDate()-2)).toISOString(),o=e.filter(r=>r.created>=n);console.log(o),i(o)}}function d(e){const t=document.getElementById("filterPopular");t.onclick=function(){const n=e.filter(o=>o._count.bids>=10);console.log(n),i(n)}}async function g(){try{const e={method:"GET",headers:a("application/json"),body:JSON.stringify()},t=await fetch(`${l}?_active=true`,e);if(t.ok){const n=await t.json();i(n),f(n),u(n),d(n)}else alert("oops! something went wrong!")}catch(e){console.log(e)}}g();

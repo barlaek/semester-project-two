@@ -10,10 +10,10 @@ export function viewListings(listings) {
   listingsContainer.innerHTML = "";
   if (listings) {
     listings.forEach((listing) => {
-      return (listingsContainer.innerHTML += `<a href="/src/html/listing/listing.html?id=${listing.id}">
-        <img src="${listing.media}"/>
-        <p>${listing.title}</p>
-        <p>Ends at ${listing.endsAt}</p>
+      return (listingsContainer.innerHTML += `<a href="/src/html/listing/listing.html?id=${listing.id}" class="w-100">
+          <img src="${listing.media}" class="object-contain h-90 w-100"/>
+          <p>${listing.title}</p>
+          <p>Ends at ${listing.endsAt}</p>
         </a>`);
     });
   }
