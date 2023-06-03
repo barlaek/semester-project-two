@@ -10,12 +10,13 @@
     "test-e2e": "cypress open",
     "test-e2e-cli": "cypress run",
     "dev": "vite",
-    "vite-build": "vite build && tailwindcss -i ./src/styles/input.css -o ./dist/output.css --watch",
+    "vite-build": "vite build",
     "vite-preview": "vite preview",
     "format": "prettier -w src/**/*.mjs",
     "lint": "eslint src/**/*.mjs",
     "lint-fix": "eslint src/**/*.mjs --cache --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tailwind" : "tailwindcss -i ./src/styles/input.css -o ./dist/output.css --watch"
   },
   "repository": {
     "type": "git",

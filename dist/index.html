@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page | Auctioneer</title>
-    <link rel="stylesheet" src="./src/styles/input.css" />
-    <script type="module" crossorigin src="/assets/main.dea292c4.js"></script>
+
+    <script type="module" crossorigin src="/assets/main.29c627c2.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/headers.e04ea350.js" />
+    <link rel="stylesheet" href="/assets/index.b6929830.css" />
   </head>
   <body>
     <header>
       <nav>
-        <button type="button" id="home">home</button>
+        <button class="bg-red-500" type="button" id="home">home</button>
         <button type="button" id="registerBtn">register</button>
         <button type="button" id="loginBtn">login</button>
         <button type="button" id="createBtn">create new listing</button>
@@ -32,7 +33,7 @@
         <button type="button" id="filterPopular">most popular</button>
       </div>
 
-      <div id="listingsContainer"></div>
+      <div id="listingsContainer" class="grid grid-cols-4 gap-4"></div>
     </main>
 
     <footer>
