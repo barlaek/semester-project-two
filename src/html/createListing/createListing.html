@@ -5,17 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create new listing | Auctioneer</title>
+    <link rel="stylesheet" href="src/styles/input.css" />
+    <link rel="stylesheet" href="dist/output.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <button type="button" id="home">home</button>
-        <button type="button" id="registerBtn">register</button>
-        <button type="button" id="loginBtn">login</button>
-        <button type="button" id="createBtn">create new listing</button>
-        <button type="button" id="profile">profile</button>
-        <button type="button" id="logoutBtn">Logout</button>
-      </nav>
+    <header class="flex flex-col justify-center m-0">
+      <div class="flex my-2 justify-center">
+        <a href="/" class="text-lime-500 px-2 mx-2"><h1>Auctioneer</h1></a>
+        <nav class="flex">
+          <form id="searchbar">
+            <label for="searchbar" name="search">
+              <input
+                class="border border-solid rounded p-1 pr-4"
+                id="search"
+                type="search"
+                placeholder="Search"
+              />
+            </label>
+          </form>
+          <button
+            class="bg-lime-500 text-white hover:bg-white hover:text-lime-500 py-1 px-4 mx-2 rounded"
+            type="button"
+            id="registerBtn"
+          >
+            register
+          </button>
+          <button
+            class="bg-lime-500 text-white hover:bg-white hover:text-lime-500 py-1 px-4 mx-2 rounded"
+            type="button"
+            id="loginBtn"
+          >
+            login
+          </button>
+          <button
+            class="bg-red-500 text-white hover:bg-white hover:text-red-500 py-1 px-4 mx-2 rounded"
+            type="button"
+            id="logoutBtn"
+          >
+            logout
+          </button>
+          <button
+            class="bg-lime-500 text-white hover:bg-white hover:text-lime-500 py-1 px-4 mx-2 rounded"
+            type="button"
+            id="createBtn"
+          >
+            create new listing
+          </button>
+          <button
+            class="bg-lime-500 text-white hover:bg-white hover:text-lime-500 py-1 px-4 mx-2 rounded"
+            type="button"
+            id="profile"
+          >
+            profile
+          </button>
+        </nav>
+      </div>
+      <div class="flex justify-center mb-2" id="filter">
+        <p class="py-1 px-4 mx-2">Filter by:</p>
+        <button class="py-1 px-4 mx-2" type="button" id="filterRecent">
+          most recent
+        </button>
+        <button class="py-1 px-4 mx-2" type="button" id="filterPopular">
+          most popular
+        </button>
+      </div>
     </header>
 
     <main>
