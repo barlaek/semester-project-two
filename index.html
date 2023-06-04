@@ -18,9 +18,6 @@
         <button type="button" id="profile">profile</button>
         <button type="button" id="logoutBtn">logout</button>
       </nav>
-    </header>
-
-    <main>
       <form id="searchbar">
         <label for="searchbar" name="search">
           <input id="search" type="search" placeholder="Search" />
@@ -30,10 +27,12 @@
         <button type="button" id="filterRecent">most recent</button>
         <button type="button" id="filterPopular">most popular</button>
       </div>
+    </header>
 
+    <main class="bg-slate-50">
       <div
         id="listingsContainer"
-        class="grid gap-2 justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-auto"
+        class="grid gap-2 justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 m-auto p-4"
       ></div>
     </main>
 
