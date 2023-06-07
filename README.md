@@ -1,14 +1,10 @@
 # Auctioneer
 
----
-
 ![Auctioneer website](/images/auctioneer-screenshot.png)
 
-## An auction site built with vanilla javascript and tailwind css.
+An auction site built with vanilla javascript and tailwind css.
 
 ## Description
-
----
 
 Key functional aspects of the auction site:
 
@@ -20,16 +16,12 @@ Key functional aspects of the auction site:
 
 ## Built with
 
----
-
 - HTML
 - Tailwind CSS
 - JavaScript
 - Vite
 
 ## Getting started
-
----
 
 ### Installing
 
@@ -56,12 +48,8 @@ To run this project
 
 ## Contributing
 
----
-
 To contribue to this project, fork the project and create a pull request. Submit the request for reivew. Please provide documentation with JSDocs and detail contributions made to the project.
 
 ## Contact
-
----
 
 [My GitHub page](https://github.com/barlaek)
