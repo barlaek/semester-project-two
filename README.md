@@ -1,63 +1,67 @@
-# semester-project-two
+# Auctioneer
 
-Auction site
+---
 
-This project is an incomplete version of an auction website as it lacks styling.
+![Auctioneer website](/images/auctioneer-screenshot.png)
 
-However, the site is fully functional.
+## An auction site built with vanilla javascript and tailwind css.
 
-## use
+## Description
 
-On the website a user may view listings, search and filter through the listings, and view individual listings.
+---
 
-To use the site, a user may register an account. To register the user must use a valid email address.
+Key functional aspects of the auction site:
 
-Valid email addresses includes @noroff.no and @stud.noroff.no.
+- User can register an account with a @stud.noroff.no email
+- User login with profile dashboard
+- Registered users can CRUD auction items
+- Users can search for listed auction items posted to the API
+- Registered users can bid on auction items
 
-Example: example@noroff.no
+## Built with
 
-The user may login with email and password the user has registered.
+---
 
-As a registered user, the user is granted 1000 credits at registration. The user may use these credits to bid on listings.
+- HTML
+- Tailwind CSS
+- JavaScript
+- Vite
 
-Provide the number of credits in the input field and press bid to place bid.
+## Getting started
 
-The user may create his/her own listing as well. Provide the required data, title and deadline, and add optional data if wished.
+---
 
-Any media requires a URL string to a valid address.
+### Installing
 
-Under the profile tab, the user may update his/her avatar and listings and may view his/her credits.
+To get started with this project:
 
-The user may log out using the logout button in the NAV. This removes the profile object from localStorage and redirects the user to index.html.
+1. Clone this repo:
+   `git clone git@github.com:barlaek/semester-project-two.git`
 
-## build
+2. Install dependencies
+   `npm i`
 
-To continue building on this application, create a fork and clone the repository.
+### Running
 
-Open the repository in an IDE and open the terminal.
+To run this project
 
-To build you need a package manager. This repository uses NPM.
+1. Start the dev server:
+   `npm run dev`
 
-Install dependencies.
+2. Start the tailwind server:
+   `npm run tailwind`
 
-Run command: npm i
+3. Build the project:
+   `npm run vite-build`
 
-To install all the dependencies.
+## Contributing
 
-This project uses Vite to bundle and build the distribution folder.
+---
 
-Make sure export default server at vite.config.js is active to run development.
+To contribue to this project, fork the project and create a pull request. Submit the request for reivew. Please provide documentation with JSDocs and detail contributions made to the project.
 
-Run command: npm run dev
+## Contact
 
-To build, make sure defineConfig at vite.config.js is active.
+---
 
-Run command: npm run vite-build
-
-to build the distribution.
-
-## Testing badges
-
-[![Automated Unit Testing](https://github.com/barlaek/semester-project-two/actions/workflows/unit-test.yml/badge.svg)](https://github.com/barlaek/semester-project-two/actions/workflows/unit-test.yml)
-
-[![Automated E2E Testing](https://github.com/barlaek/semester-project-two/actions/workflows/e2e-test.yml/badge.svg)](https://github.com/barlaek/semester-project-two/actions/workflows/e2e-test.yml)
+[My GitHub page](https://github.com/barlaek)
